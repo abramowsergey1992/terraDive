@@ -1,47 +1,55 @@
 .header
-	.container
-		.header__top
-			.header__top-row
-				a.header__logo(href="/")
-					img(src="img/logo.svg", alt="")
+	.header__full
+		.container
+			.header__top
+				.header__top-row
+					a.header__logo(href="/")
+						img(src="img/logo.svg", alt="")
+					a.header__phone(href="tel:89150881384") +7 (915) 088-13-84
+					a.header__lang.btn._outline(href="/eng/") En
+					a.header__feedback.btn Leave a request
+			.header__bottom 
+				.header__menu-row 
+						.header__menu-item._is-dropdown
+							a.header__menu-link(href="#") About company
+							.header__menu-dropdown 
+								.header__menu-dropdown-row 
+									.header__menu-dropdown-item
+										.header__menu-dropdown-item-bg 
+											+picture('header-menu-drop-bg','jpg')
+										a.header__menu-dropdown-item-link(href="#") About us 
+										.header__menu-dropdown-item-arrow
+									.header__menu-dropdown-item
+										.header__menu-dropdown-item-bg 
+											+picture('header-menu-drop-bg','jpg')
+										a.header__menu-dropdown-item-link(href="#") Areas of application 
+										.header__menu-dropdown-item-arrow
+									.header__menu-dropdown-item
+										.header__menu-dropdown-item-bg 
+											+picture('header-menu-drop-bg','jpg')
+										a.header__menu-dropdown-item-link(href="#") Certificates
+										.header__menu-dropdown-item-arrow
+									.header__menu-dropdown-item
+										.header__menu-dropdown-item-bg 
+											+picture('header-menu-drop-bg','jpg')
+										a.header__menu-dropdown-item-link(href="#") Partners
+										.header__menu-dropdown-item-arrow
+						.header__menu-item
+							a.header__menu-link(href="#") Uniqueness
+						.header__menu-item
+							a.header__menu-link(href="#")  Services 
+						.header__menu-item
+							a.header__menu-link(href="#") Radars
+						.header__menu-item
+							a.header__menu-link(href="#") Blog
+						.header__menu-item
+							a.header__menu-link(href="#") Contacts 
+	.header__mini
+		.container
+			.header__fixed 
+				.header__menu-row 
+		
 				a.header__phone(href="tel:89150881384") +7 (915) 088-13-84
 				a.header__lang.btn._outline(href="/eng/") En
 				a.header__feedback.btn Leave a request
-		.header__bottom 
-			.header__menu-row 
-					.header__menu-item._is-dropdown
-						a.header__menu-link(href="#") About company
-						.header__menu-dropdown 
-							.header__menu-dropdown-row 
-								.header__menu-dropdown-item
-									.header__menu-dropdown-item-bg 
-										+picture('header-menu-drop-bg','jpg')
-									a.header__menu-dropdown-item-link(href="#") About us 
-									.header__menu-dropdown-item-arrow
-								.header__menu-dropdown-item
-									.header__menu-dropdown-item-bg 
-										+picture('header-menu-drop-bg','jpg')
-									a.header__menu-dropdown-item-link(href="#") Areas of application 
-									.header__menu-dropdown-item-arrow
-								.header__menu-dropdown-item
-									.header__menu-dropdown-item-bg 
-										+picture('header-menu-drop-bg','jpg')
-									a.header__menu-dropdown-item-link(href="#") Certificates
-									.header__menu-dropdown-item-arrow
-								.header__menu-dropdown-item
-									.header__menu-dropdown-item-bg 
-										+picture('header-menu-drop-bg','jpg')
-									a.header__menu-dropdown-item-link(href="#") Partners
-									.header__menu-dropdown-item-arrow
-					.header__menu-item
-						a.header__menu-link(href="#") Uniqueness
-					.header__menu-item
-						a.header__menu-link(href="#")  Services 
-					.header__menu-item
-						a.header__menu-link(href="#") Radars
-					.header__menu-item
-						a.header__menu-link(href="#") Blog
-					.header__menu-item
-						a.header__menu-link(href="#") Contacts 
-
 
