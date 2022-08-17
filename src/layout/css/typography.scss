@@ -1,0 +1,18 @@
+h1,
+.h1 {
+	font-family: "Manrope";
+	font-style: normal;
+	font-weight: 800;
+	font-size: 48px;
+	line-height: 121.6%;
+	text-align: center;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+	color: #5a6171;
+	color {
+		color: $blue;
+	}
+}
+h2,
+.h2 {
+}
