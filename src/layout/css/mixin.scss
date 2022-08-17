@@ -1,0 +1,7 @@
+@use "sass:math";
+
+@mixin lh($fontValue, $heightValue) {
+	$my_width: $heightValue/$fontValue * 100%;
+
+	line-height: $my_width;
+}
