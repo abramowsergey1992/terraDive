@@ -31,23 +31,23 @@ var webp = require('gulp-webp');
 gulp.task('serve', function() {
     browserSync.init({
         server: {
-            baseDir: "build"
+            baseDir: "docs"
         }
     });
-    gulp.watch("build/**/*.{html,css,js}").on('change', browserSync.reload);
+    gulp.watch("docs/**/*.{html,css,js}").on('change', browserSync.reload);
 });
 
 
 var p = {
-    build: {
-        html: 'build/',
-        js: 'build/js/',
-        json: 'build/json/',
-        css: 'build/css/',
-        img: 'build/img/',
-        video: 'build/video/',
-        audio: 'build/audio/',
-        fonts: 'build/fonts/'
+    docs: {
+        html: 'docs/',
+        js: 'docs/js/',
+        json: 'docs/json/',
+        css: 'docs/css/',
+        img: 'docs/img/',
+        video: 'docs/video/',
+        audio: 'docs/audio/',
+        fonts: 'docs/fonts/'
     },
     src: {
         layout_pug: 'src/layout/**/*.pug',
@@ -66,10 +66,10 @@ var p = {
         webp: 'src/assets/webp/*.{png,jpg}',
         sprite: 'src/assets/sprite/*.svg',
     },
-    clean: 'build'
+    clean: 'docs'
 };
 
-// удаление папки build
+// удаление папки docs
 gulp.task('clean', function() {
     return gulp.src(p.clean, {read: false})
         .pipe(clean());
@@ -91,10 +91,10 @@ gulp.task('pages-js', function(done) {
         p.src.layout_js])
 		.pipe(plumber())
 		.pipe(concat('main.js'))
-		.pipe(gulp.dest(p.build.js))
+		.pipe(gulp.dest(p.docs.js))
 		.pipe(uglify())
 		.pipe(rename('main.min.js'))
-		.pipe(gulp.dest(p.build.js));
+		.pipe(gulp.dest(p.docs.js));
 });
 
 // //Сбор скриптов лайаута
@@ -102,10 +102,10 @@ gulp.task('pages-js', function(done) {
 // 		return gulp.src(p.src.layout_js)
 // 		.pipe(plumber())
 // 		.pipe(concat('main.js'))
-// 		.pipe(gulp.dest(p.build.js))
+// 		.pipe(gulp.dest(p.docs.js))
 // 		.pipe(uglify())
 // 		.pipe(rename('main.min.js'))
-// 		.pipe(gulp.dest(p.build.js));
+// 		.pipe(gulp.dest(p.docs.js));
 // });
 
 //Сбор шаблонов всех страниц
@@ -119,7 +119,7 @@ gulp.task('pages-pug', function(done) {
         .pipe(bemValidator())
         .pipe(replace('{{template-name}}',folder))
 		.pipe(rename(folder + '.html'))
-		.pipe(gulp.dest(p.build.html));
+		.pipe(gulp.dest(p.docs.html));
     });
     done();
 });
@@ -139,7 +139,7 @@ gulp.task('pages-scss', function(done) {
         .pipe(shorthand())
 		.pipe(csso())
 		.pipe(autoprefixer())
-		.pipe(gulp.dest(p.build.css));
+		.pipe(gulp.dest(p.docs.css));
 
 });
 
@@ -152,7 +152,7 @@ gulp.task('page-pug', function(done) {
 		return gulp.src(path.join(p.src.pages, folder, '/*.pug'))
         .pipe(newer(
             {
-                dest:  p.build.html+'/'+folder+'.html',
+                dest:  p.docs.html+'/'+folder+'.html',
                 extra: path.join(p.src.pages, folder, '/**/*.pug'),
             }
         ))
@@ -161,7 +161,7 @@ gulp.task('page-pug', function(done) {
         .pipe(bemValidator())
         .pipe(replace('{{template-name}}',folder))
 		.pipe(rename(folder + '.html'))
-		.pipe(gulp.dest(p.build.html));
+		.pipe(gulp.dest(p.docs.html));
     });
     done();
 });
@@ -183,7 +183,7 @@ gulp.task('page-scss', function(done) {
         .pipe(shorthand())
 		.pipe(csso())
 		.pipe(autoprefixer())
-		.pipe(gulp.dest(p.build.css));
+		.pipe(gulp.dest(p.docs.css));
 
   
 });
@@ -192,19 +192,19 @@ gulp.task('vendor-css', function(){
 	return gulp.src(p.src.vendor_css) 
 		.pipe(plumber())
 		.pipe(concat('vendor.css'))
-		.pipe(gulp.dest(p.build.css));
+		.pipe(gulp.dest(p.docs.css));
 });
 
 //Сбор скриптов измененной страницы
 gulp.task('page-js', function(done) {
 		return gulp.src(path.join(p.src.js, '/**/*.js'))
 		.pipe(plumber())
-        .pipe(newer( p.build.css+'all.min.js'))
+        .pipe(newer( p.docs.css+'all.min.js'))
 		.pipe(concat( 'all.js'))
-		.pipe(gulp.dest(p.build.js))
+		.pipe(gulp.dest(p.docs.js))
 		.pipe(uglify())
 		.pipe(rename('all.min.js'))
-		.pipe(gulp.dest(p.build.js));
+		.pipe(gulp.dest(p.docs.js));
    
 });
 
@@ -232,7 +232,7 @@ gulp.task('layout-scss', function(done) {
         .pipe(shorthand())
         .pipe(csso())
 		.pipe(autoprefixer())
-		.pipe(gulp.dest(p.build.css));
+		.pipe(gulp.dest(p.docs.css));
 });
 
 // обработка vendor js 
@@ -240,7 +240,7 @@ gulp.task('vendor-js', function(){
 	return gulp.src(p.src.vendor_js) 
 		.pipe(plumber())
 		.pipe(concat('vendor.js'))
-		.pipe(gulp.dest(p.build.js));
+		.pipe(gulp.dest(p.docs.js));
 });
 
 // обработка vendor css 
@@ -248,48 +248,48 @@ gulp.task('vendor-css', function(){
 	return gulp.src(p.src.vendor_css) 
 		.pipe(plumber())
 		.pipe(concat('vendor.css'))
-		.pipe(gulp.dest(p.build.css));
+		.pipe(gulp.dest(p.docs.css));
 });
 
 
 // обработка json
 gulp.task('json', function(){
 	return gulp.src(p.src.json) 
-		.pipe(gulp.dest(p.build.json))
+		.pipe(gulp.dest(p.docs.json))
 });
 
 // обработка audio
 gulp.task('audio', function(){
 	return gulp.src(p.src.audio) 
-		.pipe(gulp.dest(p.build.audio))
+		.pipe(gulp.dest(p.docs.audio))
 });
 
 // обработка video
 gulp.task('video', function(){
 	return gulp.src(p.src.video) 
-		.pipe(gulp.dest(p.build.video))
+		.pipe(gulp.dest(p.docs.video))
 });
 
 // обработка fonts
 gulp.task('fonts', function(){
 	return gulp.src(p.src.fonts) 
-		.pipe(gulp.dest(p.build.fonts))
+		.pipe(gulp.dest(p.docs.fonts))
 });
 
 // обработка img-icons
 gulp.task('img', function(){
 	return gulp.src(p.src.img) 
-        .pipe(newer(p.build.img))
-		.pipe(gulp.dest(p.build.img))
+        .pipe(newer(p.docs.img))
+		.pipe(gulp.dest(p.docs.img))
 });
 
 // обработка WEBP
 gulp.task('webp', function(){
     return gulp.src(p.src.webp) 
-        .pipe(newer(p.build.img))
-        .pipe(gulp.dest(p.build.img))
+        .pipe(newer(p.docs.img))
+        .pipe(gulp.dest(p.docs.img))
         .pipe(webp())
-		.pipe(gulp.dest(p.build.img))
+		.pipe(gulp.dest(p.docs.img))
 });
 
 // обработка svg
@@ -301,7 +301,7 @@ gulp.task('list', function (done) {
         content = content + "<li  style='margin:15px 0'>  <a href='"+folder+".html' >"+folder+".html</a></li>"
     });
     content = content +'</body></html>';
-    fs.writeFile("build/index.html",content, function(err){
+    fs.writeFile("docs/index.html",content, function(err){
         if (err) {
             console.log(err);
         } else {
@@ -340,11 +340,11 @@ gulp.task('sprite', function () {
         }))
 		.pipe(replace('&gt;', '>'))
 		.pipe(svgstore())
-		.pipe(gulp.dest(p.build.img));
+		.pipe(gulp.dest(p.docs.img));
 });
 
 
-gulp.task('rebuild',gulp.series('clean','list','vendor-js','vendor-css','layout-scss','pages-pug','pages-js','pages-scss','sprite','webp','img','fonts','json','audio','video'));
+gulp.task('redocs',gulp.series('clean','list','vendor-js','vendor-css','layout-scss','pages-pug','pages-js','pages-scss','sprite','webp','img','fonts','json','audio','video'));
 gulp.task('watch', function(){
     gulp.watch(p.src.layout_css, gulp.parallel('layout-scss'));
     // gulp.watch(p.src.layout_js, gulp.parallel('layout-js',));
