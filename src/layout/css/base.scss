@@ -1,0 +1,26 @@
+body {
+	font-family: "Manrope";
+	font-style: normal;
+	font-weight: 100;
+	font-size: 16px;
+	line-height: 150%;
+	color: #2a2a29;
+	letter-spacing: -0.02em;
+
+	&._no-scroll {
+		overflow: hidden;
+	}
+}
+img {
+	max-width: 100%;
+}
+* {
+	-webkit-box-decoration-break: clone;
+	isolation: isolate;
+}
+.container {
+	max-width: 1368px;
+	padding: 0px 35px;
+	margin-left: auto;
+	margin-right: auto;
+}
