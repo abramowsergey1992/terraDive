@@ -400,7 +400,7 @@
 	}
 }
 
-.front-servises {
+.front-services {
 	&__head {
 		display: flex;
 		flex-direction: row;
@@ -420,7 +420,7 @@
 	}
 }
 
-.front-servise {
+.front-service {
 	overflow: hidden;
 	position: relative;
 	&__bg {
@@ -433,7 +433,7 @@
 		z-index: 1;
 		@include lh(429, 341);
 		transition: transform 0.5s;
-		.front-servise:hover & {
+		.front-service:hover & {
 			transform: scale(1.35);
 		}
 	}
