@@ -1,4 +1,6 @@
 $(function () {
+    let controller = new ScrollMagic.Controller();
+
     if ($('.front-top').length) {
         var scene = document.getElementById('front-top-bg');
         var parallaxInstance = new Parallax(scene);
@@ -19,4 +21,17 @@ $(function () {
             },
         });
     }
+
+    if ($('.front-m100 ').length) {
+         	let m100cover = new ScrollMagic.Scene({triggerElement: "#front-m100", triggerHook:0.1, duration: 500})
+					// animate color and top border in relation to scroll position
+                  .setPin("#front-m100-pin")
+					.setTween("#front-m100-mask", {left: "50%",  width:'100%'}) // the tween durtion can be omitted and defaults to 1
+					// .addIndicators({name: "2 (duration: 300)"}) // add indicators (requires plugin)
+					.addTo(controller);
+         	let m100bg = new ScrollMagic.Scene({triggerElement: "#front-m100", offset:"400",triggerHook:0.1, duration: 100})
+					.setTween("#front-m100-cover", {opacity:1}) // the tween durtion can be omitted and defaults to 1
+					.addIndicators({name: "2 (duration: 300)"}) // add indicators (requires plugin)
+					.addTo(controller);
+     }
 })
