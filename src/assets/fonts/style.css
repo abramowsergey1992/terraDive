@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Geometria';
-    src: local('Geometria Regular'), local('Geometria-Regular'),
-        url('Geometria-Regular.woff2') format('woff2'),
-        url('Geometria-Regular.woff') format('woff'),
-        url('Geometria-Regular.ttf') format('truetype');
-    font-weight: 400;
+    src: local('Geometria Light'), local('Geometria-Light'),
+        url('Geometria-Light.woff2') format('woff2'),
+        url('Geometria-Light.woff') format('woff'),
+        url('Geometria-Light.ttf') format('truetype');
+    font-weight: 300;
     font-style: normal;
   }
