@@ -15,4 +15,16 @@ h1,
 }
 h2,
 .h2 {
+	font-family: "Manrope";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 121.6%;
+
+	letter-spacing: 6px;
+	text-transform: uppercase;
+	color: #5a6171;
+	color {
+		color: $blue;
+	}
 }

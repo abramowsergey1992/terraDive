@@ -308,3 +308,26 @@
 		}
 	}
 }
+.front-about {
+	&__row {
+		display: grid;
+		grid-template-columns: 40% auto;
+		grid-gap: 30px;
+	}
+
+	&__headline {
+	}
+
+	&__body {
+		p {
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 158%;
+			letter-spacing: -0.04em;
+			color: #2a2a29;
+		}
+		p + .btnc {
+			margin-top: 23px;
+		}
+	}
+}
