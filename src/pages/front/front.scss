@@ -399,3 +399,105 @@
 		bottom: 30px;
 	}
 }
+
+.front-servises {
+	&__head {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		margin-bottom: 45px;
+		h2,
+		.h2 {
+			margin-bottom: 0;
+			margin-right: auto;
+		}
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 13px;
+	}
+}
+
+.front-servise {
+	overflow: hidden;
+	position: relative;
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 1;
+		@include lh(429, 341);
+		transition: transform 0.5s;
+		.front-servise:hover & {
+			transform: scale(1.35);
+		}
+	}
+
+	&::after {
+		position: relative;
+		display: block;
+		content: "";
+		z-index: 3;
+		padding-bottom: 79.48718%;
+		background: rgba($color: #000000, $alpha: 0.3);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		z-index: 10;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		padding: 40px 30px;
+	}
+	&__title {
+		margin-bottom: auto;
+		font-weight: 700;
+		font-size: 24px;
+		@include lh(24, 33);
+		letter-spacing: -0.04em;
+		color: #ffffff;
+	}
+
+	&__more {
+		font-weight: 700;
+		text-decoration: none;
+		font-size: 14px;
+		line-height: 18px;
+		text-transform: uppercase;
+		letter-spacing: -0.03em;
+		color: #ffffff;
+		&::before {
+			display: block;
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 11;
+			left: 0;
+			top: 0;
+		}
+		&::after {
+			background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.90828 7.67748L6.20117 8.38459L7.61538 9.7988L8.32249 9.09169L6.90828 7.67748ZM11 4.99997L11.7071 5.70708L12.4142 4.99997L11.7071 4.29287L11 4.99997ZM8.32249 0.90825L7.61538 0.201143L6.20117 1.61536L6.90828 2.32246L8.32249 0.90825ZM8.32249 9.09169L11.7071 5.70708L10.2929 4.29287L6.90828 7.67748L8.32249 9.09169ZM11.7071 4.29287L8.32249 0.90825L6.90828 2.32246L10.2929 5.70708L11.7071 4.29287ZM11 3.99997H0V5.99997H11V3.99997Z' fill='white'/%3E%3C/svg%3E%0A");
+			display: inline-block;
+			width: 13px;
+			height: 10px;
+			margin-left: 8px;
+			position: relative;
+			left: 0;
+			content: "";
+			transition: left 0.5s;
+		}
+		&:hover::after {
+			left: 5px;
+		}
+	}
+}
