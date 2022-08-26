@@ -53,6 +53,35 @@ $(function () {
             },
         });
     }
+    if ($('.front-cooperation-slider').length) {
+        const frontСooperationSlider = new Swiper('.front-cooperation-slider', {
+        slidesPerView: 3,
+        spaceBetween: 0,
+        breakpoints: {
+            550: {
+            slidesPerView: 4,
+            },
+            700: {
+            slidesPerView: 4,
+            },
+            992: {
+            slidesPerView: 5,
+            }
+        }
+        })
+        $('.front-cooperation__filter').click(function () {
+            let filter = $(this).data('filter');
+            $('.front-cooperation__filter').removeClass('_active');
+            $(this).addClass('_active')
+            $('.front-cooperation-slider .swiper-slide').each(function () {
+                $(this).removeAttr('style');
+                if ($(this).data('category') == filter) {
+                    $(this).css('display', 'none');
+                }
+            });
+        })
+        $('.front-cooperation__filter').first().trigger('click')
+    }
     if ($('.front-algorithm').length) {
         $('.front-algorithm').first().addClass('_active')
         $('.front-algorithm__left').click(function () {
