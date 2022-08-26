@@ -632,3 +632,100 @@
 		}
 	}
 }
+
+.front-geo {
+	&__cover {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		background-color: $blue;
+	}
+	&__mask {
+		position: absolute;
+		left: 60%;
+		top: 50%;
+
+		transform: translateX(-50%) translateY(-50%);
+		width: 5000%;
+		max-width: initial;
+	}
+	&__head {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 10px;
+		h2,
+		.h2 {
+			margin-right: auto;
+			margin-bottom: 0;
+		}
+	}
+
+	&__desc {
+		margin-bottom: 5px;
+		p {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 150%;
+			/* or*/
+
+			letter-spacing: -0.02em;
+
+			color: #5a6171;
+		}
+	}
+}
+
+.front-map {
+	position: relative;
+	overflow: hidden;
+	&__img {
+		max-width: 100%;
+	}
+}
+.front-map-marker {
+	position: absolute;
+	width: 0;
+	height: 0;
+	cursor: pointer;
+	cursor: pointer;
+
+	&__img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		background-image: url("data:image/svg+xml,%3Csvg width='17' height='18' viewBox='0 0 17 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.051 0.969727C3.61962 0.969726 0.0302513 4.57687 0.0302512 9.01809L3.81393 9.01809C3.81393 6.66749 5.71386 4.76102 8.0564 4.76102L8.0564 0.969727L8.051 0.969727Z' fill='%23364DE7'/%3E%3Cpath d='M8.05103 13.2751L8.05103 17.0718C12.477 17.0718 16.0718 13.4647 16.0718 9.01807L12.2881 9.01807C12.2881 11.3687 10.3882 13.2751 8.04563 13.2751L8.05103 13.2751Z' fill='%23364DE7'/%3E%3C/svg%3E%0A");
+		width: 17px;
+		height: 18px;
+		background-position: center;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	&__baloon {
+		padding: 19px 27px;
+		background: #ffffff;
+		font-weight: 800;
+		font-size: 12px;
+		line-height: 16px;
+		letter-spacing: -0.03em;
+		position: absolute;
+		left: -50%;
+		margin-top: 15px;
+		transform: translateX(-50%);
+		color: #2a2a29;
+		opacity: 0;
+		pointer-events: none;
+		top: 40px;
+		box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+		.front-map-marker:hover & {
+			opacity: 1;
+			pointer-events: auto;
+			top: 0;
+			transition: opacity 0.3s, top 0.3s;
+		}
+	}
+}
