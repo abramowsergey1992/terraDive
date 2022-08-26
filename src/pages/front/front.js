@@ -43,6 +43,16 @@ $(function () {
 					.addIndicators({name: "2 (duration: 300)"}) 
 					.addTo(controller);
     }
+    if ($('.front-news-slider').length) {
+         const frontNewsSlider = new Swiper('.front-news-slider', {
+            slidesPerView:3,
+            spaceBetween: 13,
+            navigation: {
+                nextEl: $('.front-top__slider-nav-next')[0],
+                prevEl: $('.front-top__slider-nav-prev')[0],
+            },
+        });
+    }
     if ($('.front-algorithm').length) {
         $('.front-algorithm').first().addClass('_active')
         $('.front-algorithm__left').click(function () {
