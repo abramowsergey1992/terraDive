@@ -729,3 +729,31 @@
 		}
 	}
 }
+
+.front-request {
+	position: relative;
+	overflow: hidden;
+	background: $blue;
+	padding: 105px 70px;
+	padding-right: 50px;
+	&__circle {
+		position: absolute;
+		right: 0px;
+		top: 50%;
+		transform: translateX(50%) translateY(-50%);
+		max-width: 80%;
+	}
+	h2,
+	.h2 {
+		color: #fff;
+		margin-right: auto;
+		margin-bottom: 0;
+	}
+	&__row {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+	}
+}
+.block {
+}
