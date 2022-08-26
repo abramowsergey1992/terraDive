@@ -59,6 +59,13 @@ $(function () {
             },
         });
     }
+    if ($('.front-reviews-slider').length) {
+         const frontNewsSlider = new Swiper('.front-reviews-slider', {
+            slidesPerView:3,
+            spaceBetween: 30,
+
+        });
+    }
     if ($('.front-cooperation-slider').length) {
         const frontСooperationSlider = new Swiper('.front-cooperation-slider', {
         slidesPerView: 3,
