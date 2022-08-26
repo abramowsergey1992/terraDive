@@ -1,3 +1,4 @@
+
 $(function () {
     let controller = new ScrollMagic.Controller();
 
@@ -33,7 +34,35 @@ $(function () {
 					.setTween("#front-m100-cover", {opacity:1}) // the tween durtion can be omitted and defaults to 1
 					.addIndicators({name: "2 (duration: 300)"}) // add indicators (requires plugin)
 					.addTo(controller);
-     }
+    }
+    if ($('.front-algorithm').length) {
+        $('.front-algorithm').first().addClass('_active')
+        $('.front-algorithm__left').click(function () {
+            $('.front-algorithm').removeClass('_active')
+            $(this).closest('.front-algorithm').addClass('_active')
+        })
+        function algoritmSize() {
+            let height=0;
+            let width = $('.front-algorithm._active .front-algorithm__table-wrap').outerWidth();
+            $('.front-algorithm__table-wrap table').removeAttr('style')
+            $('.front-algorithm__table-wrap table').css('width', width);
+            $('.front-algorithm__table-wrap table').each(function () {
+                if (height <= $(this).height()) {
+                    height = $(this).height();
+                }
+            })
+           $('.front-algorithm__table-wrap table').css('min-height', height);
+           $('.front-algorithm__table-wrap table').css('min-width', width);
+            
+        }
+        algoritmSize()
+        setTimeout(function () {
+            algoritmSize()
+        },500)
+        $(window).on('resize', function(){
+            algoritmSize()
+        });
+    }
 })
 
 $(function() {
