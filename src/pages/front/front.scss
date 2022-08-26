@@ -939,3 +939,118 @@
 		}
 	}
 }
+
+.front-sertificates {
+	&__head {
+		margin-bottom: 70px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		h2,
+		.h2 {
+			margin: 0;
+			margin-right: auto;
+		}
+	}
+
+	&__row {
+	}
+}
+
+.front-sertificates-slider {
+	overflow: visible;
+}
+
+.front-sertificate {
+	perspective: 2000px;
+
+	position: relative;
+	transform-style: preserve-3d;
+	&::before {
+		padding-bottom: 140.94%;
+		display: block;
+		content: "";
+	}
+	&__front {
+		border: 1px solid #d9d9d9;
+		transition: 0.5s;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		transform: rotateY(0deg);
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		.front-sertificate:hover & {
+			transform: rotateY(-180deg);
+		}
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__back {
+		border: 1px solid #d9d9d9;
+		transition: 0.5s;
+		transform: rotateY(180deg);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		.front-sertificate:hover & {
+			transform: rotateY(0deg);
+		}
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__download {
+		background: linear-gradient(
+			0deg,
+			rgba(42, 42, 41, 0.7),
+			rgba(42, 42, 41, 0.7)
+		);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		span {
+			color: #fff;
+			font-weight: 800;
+			font-size: 16px;
+			line-height: 34px;
+			letter-spacing: -0.03em;
+			color: #ffffff;
+			&::after {
+				display: inline-block;
+				content: "";
+				background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 13.68L5.125 9.36M10 13.68L14.5 9.36M10 13.68V0M19 8.64V18H1V8.64' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+				width: 20px;
+				height: 19px;
+				position: relative;
+				top: 2px;
+				margin-left: 12px;
+			}
+		}
+	}
+}

@@ -398,3 +398,30 @@ block content
 					img(src="img/coop-logo.svg", alt="")
 				.swiper-slide(data-category="partner")
 					img(src="img/coop-logo.svg", alt="")
+	
+	.front-sertificates
+		.front-sertificates__head 
+			h2 Certificates
+			a(href="#").btnc  all Certificates
+		.front-sertificates__row
+			.front-sertificates-slider.swiper
+				.swiper-wrapper 
+					.swiper-slide.front-sertificate
+						.front-sertificate__front
+							a(href="#",target="blank") 
+								+picture('sertificate','jpg')
+						.front-sertificate__back
+							a(href="#",target="blank") 
+								+picture('sertificate-back','jpg')
+								.front-sertificate__download 
+									span Dowload .pdf
+					.swiper-slide.front-sertificate
+						.front-sertificate__front
+							a(href="#",target="blank") 
+								+picture('sertificate','jpg')
+						.front-sertificate__back
+							a(href="#",target="blank") 
+								+picture('sertificate-back','jpg')
+								.front-sertificate__download 
+									span Dowload .pdf
+							

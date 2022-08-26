@@ -43,6 +43,12 @@ $(function () {
 					.addIndicators({name: "2 (duration: 300)"}) 
 					.addTo(controller);
     }
+    if ($('.front-sertificates-slider ').length) {
+         const frontSertificateslider = new Swiper('.front-sertificates-slider', {
+            slidesPerView:4,
+            spaceBetween: 10,
+        });
+    }
     if ($('.front-news-slider').length) {
          const frontNewsSlider = new Swiper('.front-news-slider', {
             slidesPerView:3,
