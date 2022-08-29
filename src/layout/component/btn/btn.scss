@@ -39,9 +39,9 @@
 	letter-spacing: 6px;
 	text-transform: uppercase;
 	position: relative;
-
+	display: inline-block;
 	text-decoration: none;
-	display: block;
+
 	padding: 10px 0;
 	padding-left: 50px;
 	&._white {

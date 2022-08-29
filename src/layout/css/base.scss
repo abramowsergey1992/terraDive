@@ -18,14 +18,36 @@ img {
 	-webkit-box-decoration-break: clone;
 	isolation: isolate;
 }
+@media (min-width: 992px) {
+	._v-mob {
+		display: none;
+	}
+}
+@media (max-width: 992px) {
+	._v-desc {
+		display: none;
+	}
+}
+.page {
+	overflow: hidden;
+}
 .container {
 	max-width: 1368px;
 	padding: 0px 35px;
 	margin-left: auto;
 	margin-right: auto;
+	@media (max-width: 1200px) {
+		padding: 0px 20px;
+	}
+	@media (max-width: 992px) {
+		padding: 0px 10px;
+	}
 }
 .block {
 	margin-bottom: 130px;
+	@media (max-width: 992px) {
+		margin-bottom: 80px;
+	}
 }
 .center {
 	text-align: center;

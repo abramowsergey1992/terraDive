@@ -12,6 +12,13 @@ h1,
 	color {
 		color: $blue;
 	}
+	@media (max-width: 1300px) {
+		font-size: 40px;
+	}
+	@media (max-width: 992px) {
+		font-size: 32px;
+		letter-spacing: 6px;
+	}
 }
 h2,
 .h2 {
@@ -27,5 +34,14 @@ h2,
 	margin-bottom: 52px;
 	color {
 		color: $blue;
+	}
+	@media (max-width: 1300px) {
+		font-size: 40px;
+		margin-bottom: 40px;
+	}
+	@media (max-width: 992px) {
+		font-size: 32px;
+		margin-bottom: 20px;
+		letter-spacing: 6px;
 	}
 }

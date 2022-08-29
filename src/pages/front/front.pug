@@ -79,7 +79,7 @@ block content
 										.front-top-slide__body
 											p The ability to scan ground to depths of 200-300 meters, which does not violate the principle of profiling, the speed of measurements made in combination
 										a.front-top-slide__more(href="/") Read more
-
+				.front-top__slider-pagination
 
 			.front-top__slider-nav 
 				.front-top__slider-nav-prev
@@ -287,11 +287,12 @@ block content
 		#front-geo-pin
 			.front-geo__head 
 				h2 geography of activity
-				a(href="#").btnc Our projects
+				a(href="#").btnc._desc Our projects
 			.front-geo__desc 
 				p  Geokey operates in the following territories: USA, Canada, South America,
 					br
 					| China, Russia, Africa, Australia, Greece
+			a(href="#").btnc._mob Our projects
 			.front-map
 				img(src="img/map.svg", alt="").front-map__img
 				.front-map-marker(style="left:13%; top:20%")
@@ -324,7 +325,7 @@ block content
 		.front-news__bg
 		.front-news__head
 			h2 News 
-			a(href="#").btnc All news 
+			a(href="#").btnc._v-desc All news 
 		.front-news-slider.swiper 
 			.swiper-wrapper
 				.swiper-slide.front-news-preview
@@ -362,6 +363,8 @@ block content
 								color 10 
 								| MAY 2022
 							a(href="#").front-news-preview__more READ MORE
+		.center._v-mob
+			a(href="#").btnc._v-mob All news 
 	.front-cooperation.block
 		.center 
 			h2 Cooperation
@@ -402,7 +405,7 @@ block content
 	.front-sertificates.block
 		.front-sertificates__head 
 			h2 Certificates
-			a(href="#").btnc  all Certificates
+			a(href="#").btnc._v-desc  all Certificates
 		.front-sertificates__row
 			.front-sertificates-slider.swiper
 				.swiper-wrapper 
@@ -424,6 +427,8 @@ block content
 								+picture('sertificate-back','jpg')
 								.front-sertificate__download 
 									span Dowload .pdf
+		._v-mob.center
+			a(href="#").btnc  all Certificates
 	.front-reviews.block
 		h2 Reviews
 		.front-reviews-slider.swiper 
