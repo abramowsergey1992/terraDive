@@ -8,12 +8,7 @@ $(function () {
 		$(".blog-page__head-filter").click(function () {
 			$(".blog-page__head-filter").removeClass("_active");
 			$(this).addClass("_active");
-			console.log(
-				'$(this).data("slideindex")',
-				$(this).data("slideindex")
-			);
 			BlogTypeSlider.slideTo($(this).data("slideindex"));
-			Stickyfill.forceSticky();
 		});
 		$(".blog-page__filter").click(function () {
 			let filter = $(this).data("filter");
@@ -46,7 +41,6 @@ $(function () {
 					}
 				});
 			}
-			Stickyfill.forceSticky();
 		});
 		$(".blog-page__filter._active").trigger("click");
 		$(".blog-page__head-filter._active").trigger("click");
