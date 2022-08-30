@@ -1,0 +1,87 @@
+.news-preview {
+	padding: 40px 30px;
+	padding-bottom: 30px;
+	background: #ffffff;
+	border: 1px solid #d9d9d9;
+
+	&__content {
+		padding-bottom: 140px;
+		position: relative;
+		background-image: url("data:image/svg+xml,%3Csvg width='74' height='74' viewBox='0 0 74 74' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 36.7286C0 57.0201 16.5173 73.4559 36.8538 73.4559V56.1303C26.0903 56.1303 17.3605 47.4304 17.3605 36.7039H0V36.7286Z' fill='%23F9F9F9'/%3E%3Cpath d='M56.347 36.7273H73.7323C73.7323 16.4606 57.215 0 36.8536 0V17.3256C47.6171 17.3256 56.347 26.0255 56.347 36.7521V36.7273Z' fill='%23F9F9F9'/%3E%3C/svg%3E%0A");
+		background-repeat: no-repeat;
+		background-position: bottom 60px right;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		@include lh(24, 33);
+		letter-spacing: -0.04em;
+		margin-bottom: 10px;
+		color: #2a2a29;
+	}
+	p {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 19px;
+		letter-spacing: -0.04em;
+
+		/* 2 */
+
+		color: #2a2a29;
+	}
+	&__bottom {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		border-top: 1px solid #dadada;
+		padding-top: 30px;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+
+	&__date {
+		color {
+			color: $blue;
+		}
+		margin-right: auto;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 22px;
+		@include lh(16, 22);
+		letter-spacing: -0.04em;
+		color: #2a2a29;
+	}
+
+	&__more {
+		font-weight: 800;
+		font-size: 14px;
+		line-height: 19px;
+		letter-spacing: -0.03em;
+		padding-right: 19px;
+		color: #364de7;
+		position: relative;
+		text-decoration: none;
+		&::after {
+			display: block;
+			content: "";
+			position: absolute;
+			right: 0;
+			background-image: url("data:image/svg+xml,%3Csvg width='13' height='11' viewBox='0 0 13 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.90828 8.17736L6.20117 8.88447L7.61538 10.2987L8.32249 9.59157L6.90828 8.17736ZM11 5.49985L11.7071 6.20696L12.4142 5.49985L11.7071 4.79274L11 5.49985ZM8.32249 1.40813L7.61538 0.701021L6.20117 2.11523L6.90828 2.82234L8.32249 1.40813ZM8.32249 9.59157L11.7071 6.20696L10.2929 4.79274L6.90828 8.17736L8.32249 9.59157ZM11.7071 4.79274L8.32249 1.40813L6.90828 2.82234L10.2929 6.20696L11.7071 4.79274ZM11 4.49985H0V6.49985H11V4.49985Z' fill='%23364DE7'/%3E%3C/svg%3E%0A");
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 13px;
+			height: 11px;
+			top: 50%;
+			margin-top: -1px;
+			transform: translateY(-50%);
+			transition: right 0.3s;
+		}
+		&:hover {
+			&::after {
+				right: -4px;
+			}
+		}
+	}
+}

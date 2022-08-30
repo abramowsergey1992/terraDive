@@ -97,3 +97,26 @@
 	// 	transform: translateY(-50%);
 	// }
 }
+
+.btn-square {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: -0.03em;
+	color: #5a6171;
+	padding: 17px 23px;
+	border: 1px solid #5a6171;
+	transition: all 0.3s;
+	cursor: pointer;
+	background: transparent;
+	text-decoration: none;
+	&._active {
+		cursor: auto;
+	}
+	&:hover,
+	&._active {
+		background: $blue;
+		border-color: $blue;
+		color: #fff;
+	}
+}

@@ -1,0 +1,10 @@
+.sticky:before,
+.sticky:after {
+	content: "";
+	display: table;
+}
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}

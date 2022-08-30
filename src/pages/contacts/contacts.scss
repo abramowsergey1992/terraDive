@@ -3,6 +3,9 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 50px 74px;
+	@media (max-width: 992px) {
+		gap: 30px;
+	}
 }
 .contact-page {
 	position: relative;
@@ -41,6 +44,9 @@
 			font-size: 30px;
 			line-height: 159%;
 			color: #2a2a29;
+			@media (max-width: 992px) {
+				font-size: 25px;
+			}
 			a {
 				display: block;
 				text-decoration: none;
