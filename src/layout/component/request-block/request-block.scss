@@ -1,0 +1,45 @@
+.request-block {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	background: $blue;
+	padding: 105px 70px;
+	padding-right: 50px;
+	@media (max-width: 992px) {
+		padding: 20px;
+		padding-bottom: 264px;
+		padding-top: 80px;
+	}
+	&__circle {
+		position: absolute;
+		right: 0px;
+		top: 50%;
+		transform: translateX(50%) translateY(-50%);
+		max-width: 80%;
+		@media (max-width: 992px) {
+			max-width: 300%;
+			top: 238px;
+			transform: none;
+			left: 0;
+		}
+	}
+	h2,
+	.h2 {
+		color: #fff;
+		margin-right: auto;
+		margin-bottom: 0;
+		@media (max-width: 992px) {
+			margin-bottom: 30px !important;
+		}
+	}
+	&__row {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		@media (max-width: 992px) {
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+		}
+	}
+}

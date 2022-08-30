@@ -1,0 +1,158 @@
+extends ../../layout/layout
+block title
+	title terraDive
+block content
+		+breadcrumb(['Home','Blog'], 'Item News')
+		.news-page
+			.news-page__head
+				.news-page__date 10 MAY 2022
+				.news-page__title
+					p Development of equipment, data processing methods for electromagnetic subsurface sensing and experience in their application.
+			.t-full-img
+				+picture('news-img-1','jpg')
+			.text.block 
+				.h2  A way out of the situation was found when, instead of the usual 
+					color radar pulse with high-frequency filling, 
+					| a pulse without a carrier, which is called a mono pulse or video pulse, was used.
+				p Such a pulse is one or more current fluctuations in the antenna and has a relative spectrum band close to unity. The monopulse signal has the best characteristics for a ground-penetrating radar, since it provides the maximum depth of sensing and maximum resolution.This is the ultimate case of the transformation of a conventional radio pulse, when we begin to reduce the carrier frequency to increase the depth of sounding, and at the same time reduce the duration of the envelope to increase the resolution.
+				.t-two-img
+					.t-two-img__row
+						.t-two-img__item 
+							.t-two-img__img
+								+picture('news-img-2','jpg')
+							.t-two-img__desc
+								p  The result of the analysis of the georadar section, measured in wave form, using the program "MOLE - 108"
+						.t-two-img__item 
+							.t-two-img__img
+								+picture('news-img-3','jpg')
+							.t-two-img__desc
+								p Test participants
+				.h2 Currently, in many countries, such as the 
+					color USA, Japan, Canada and Sweden,
+					| various modifications of ground-penetrating radars are being developed and produced in small batches. 
+					color In the former Soviet Union, the Radar Department of the Riga Institute of Civil Aviation Engineers 
+					| under the leadership of M.I. Finkelstein was engaged in this topic.
+				ul 
+					li The frequency range of georadars usually lies in the range of 50-500 MHz, which is a compromise between the depth of sounding in units - tens of meters and the resolution in units - tens of centimeters for real geological structures.
+					li Higher-frequency radars have also been developed, having an upper frequency of up to 40 GHz, which have a depth of sensing in units - tens of centimeters and are used mainly for analyzing the condition of concrete building structures, and which are difficult to attribute to geological instruments.
+				.t-table
+					table
+						thead 
+							tr
+								th Name
+								th 
+									b %
+						tbody 
+							tr
+								td Operating frequency range, MHz, not less
+								td 
+									b 50-300
+							tr
+								td  Data sampling discreteness, nsec
+								td 
+									b 1, 2
+							tr
+								td The number of recorded frames (128ґ256 screens), not less than
+								td 
+									b 500
+							tr
+								td Receiver sensitivity, MV, not less
+								td 
+									b 100
+							tr
+								td  Pulse power of the transmitter, MW, not less
+								td 
+									b 1
+							tr
+								td Energy potential, dB, not less 
+								td 
+									b 120
+							tr
+								td Average radiated power of MW, no more
+								td 
+									b 100
+							tr
+								td Duration of recorded implementations (nsec)
+								td 
+									b 256,512,1024, 2048.
+							tr
+								td Power consumption, not more than (W)
+								td 
+							tr
+								td standby mode
+								td 
+									b 2.5
+							tr
+								td registration mode
+								td 
+									b 3.0
+							tr
+								td registration mode with backlight
+								td 
+									b 3.7
+							tr
+								td Communication with the computer via
+								td 
+									b RS232
+							tr
+								td Total weight of the complex, not more than (kg)
+								td 
+									b 10
+							tr
+								td Dimensions of the BUOY-M c CA-1, (mm), no more
+								td 
+									b 260*150*160
+							tr
+								td Operating temperature range, C°
+								td 
+									b -20 +50
+							tr
+								td Adjustment range of two additional registration thresholds
+								td 
+									b ± 16
+			include ../../layout/component/request-block/request-block
+			.other-news.block
+				.other-news__head
+					h2 Other news 
+					a(href="#").btnc._v-desc All news 
+				.other-news-slider.swiper 
+					.swiper-wrapper
+						.swiper-slide.news-preview
+							.news-preview__content
+								.news-preview__title Among the possibilities
+									br
+									| of the method
+								p The detail of survey enables to to register small-scale features of geological structures that are inaccessible to classical methods of geophysics.
+								.news-preview__bottom 
+									.news-preview__date 
+										color 10 
+										| MAY 2022
+									a(href="#").news-preview__more READ MORE
+						
+						.swiper-slide.news-preview
+							.news-preview__content
+								.news-preview__title Among the possibilities
+									br
+									| of the method
+								p The detail of survey enables to to register small-scale features of geological structures that are inaccessible to classical methods of geophysics.
+								.news-preview__bottom 
+									.news-preview__date 
+										color 10 
+										| MAY 2022
+									a(href="#").news-preview__more READ MORE
+						
+						.swiper-slide.news-preview
+							.news-preview__content
+								.news-preview__title Among the possibilities
+									br
+									| of the method
+								p The detail of survey enables to to register small-scale features of geological structures that are inaccessible to classical methods of geophysics.
+								.news-preview__bottom 
+									.news-preview__date 
+										color 10 
+										| MAY 2022
+									a(href="#").news-preview__more READ MORE
+				.center._v-mob
+					a(href="#").btnc._v-mob All news 
+			
+

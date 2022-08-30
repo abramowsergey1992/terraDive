@@ -313,14 +313,7 @@ block content
 				#front-m200-cover.front-geo__cover
 				img(src="img/m200.svg",alt='').front-geo__mask#front-m200-mask
 
-	.front-request.block
-		img.front-request__circle(src="img/circle.svg",alt)
-		.front-request__row 
-			h2  Leave a request
-				br
-				| to place an order
-			a(href="#").btnc._white  Leave a request
-
+	include ../../layout/component/request-block/request-block
 	.front-news.block
 		.front-news__bg
 		.front-news__head
@@ -365,6 +358,7 @@ block content
 							a(href="#").news-preview__more READ MORE
 		.center._v-mob
 			a(href="#").btnc._v-mob All news 
+	
 	.front-cooperation.block
 		.center 
 			h2 Cooperation
