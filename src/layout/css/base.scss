@@ -30,6 +30,10 @@ img {
 }
 .page {
 	overflow: hidden;
+	padding-top: 158px;
+}
+._no-top-padding {
+	margin-top: -158px;
 }
 .container {
 	max-width: 1368px;
@@ -51,4 +55,6 @@ img {
 }
 .center {
 	text-align: center;
+}
+.page-inner {
 }

@@ -1,3 +1,32 @@
+$(function () {
+    if ($('#contact-form').length) {
+        let validContacnt = $('#contact-form').validate(
+        {
+            errorPlacement: function (error, element) {
+            },
+                submitHandler: function (form) {
+                $('..contact-form__btn').attr('disabled','disabled')
+                $.ajax({
+                    url: $(form).attr('action'),
+                    data: $(form).serialize(),
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    context: document.body,
+                    success: function () {
+                        alert('Форма отправленна успешно')
+                        $('..contact-form__btn').removeAttr('disabled')
+                    }, error: function () {
+                        alert('Ошибка')
+                        $('..contact-form__btn').removeAttr('disabled')
+                    }
+                });
+            }
+        })
+    }
+
+})
 
 $(function () {
     let controller = new ScrollMagic.Controller();
@@ -173,7 +202,6 @@ $(function () {
         });
     }
 })
-
 $(function() {
     $('.header__mini').find('.header__menu-row ').html($('.header__full').find('.header__menu-row ').html());
   $(window).scroll(function () {
@@ -194,6 +222,14 @@ $(function() {
         }
     })
 });
+$(function () {
+    $('.select2').each(function () {
+        $(this).select2({
+            minimumResultsForSearch: -1,
+            placeholder: $(this).data('placeholder'),
+        })
+    })
+})
 var vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 var width = window.innerWidth;
@@ -204,3 +240,10 @@ window.addEventListener('resize', () => {
         width = window.innerWidth;
     }
 });
+
+
+$(function () {
+    $('._mask-phone').each(function () {
+        Inputmask("+7 (999) 999-99-99").mask(this);
+    })
+})

@@ -1,0 +1,34 @@
+.breadcrumb {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 60px;
+	&__list {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__item {
+		color: #5a6171;
+		&::after {
+			display: inline-block;
+			content: "/";
+			color: #5a6171;
+			margin: 0 6px;
+		}
+		&:last-child::after {
+			display: none;
+		}
+	}
+
+	&__link {
+		color: #999999;
+		text-decoration: none;
+		&:hover {
+			color: $blue;
+		}
+	}
+
+	&__link-current {
+	}
+}
