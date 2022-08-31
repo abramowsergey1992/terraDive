@@ -1,3 +1,47 @@
+$(function () {
+    if ($('.contact-page').length) {
+        let ind
+        $('.contact-data-swiper .swiper-slide').each(function (i) {
+            $(this).attr('data-indx',i)
+        });
+        const sliderContact = new Swiper('.contact-data-swiper ', {
+            allowTouchMove: 'false',
+            loop:false,
+        });
+        $('#contact-country').change(function () {
+            sliderContact.slideTo($('.swiper-slide[data-slide="' + $(this).val()+'"]').data('indx'))
+        })
+    }
+
+    
+    if ($('#contact-form').length) {
+        let validContacnt = $('#contact-form').validate(
+        {
+            errorPlacement: function (error, element) {
+            },
+                submitHandler: function (form) {
+                $('..contact-form__btn').attr('disabled','disabled')
+                $.ajax({
+                    url: $(form).attr('action'),
+                    data: $(form).serialize(),
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    context: document.body,
+                    success: function () {
+                        alert('Форма отправленна успешно')
+                        $('..contact-form__btn').removeAttr('disabled')
+                    }, error: function () {
+                        alert('Ошибка')
+                        $('..contact-form__btn').removeAttr('disabled')
+                    }
+                });
+            }
+        })
+    }
+
+})
 
 $(function () {
     let controller = new ScrollMagic.Controller();
@@ -174,6 +218,49 @@ $(function () {
     }
 })
 $(function () {
+	if ($(".other-news-slider").length) {
+		const OtherNewsSlider = new Swiper(".other-news-slider", {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			breakpoints: {
+				700: {
+					slidesPerView: 2,
+				},
+				1100: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+			},
+		});
+	}
+});
+
+$(function () {
+	let pagination = $(".stories-list").data("pagination");
+	let visible = 0;
+	$(".story-preview").each(function () {
+		visible++;
+		if (visible <= pagination) {
+			$(this).removeClass("_hidden-story");
+		}
+	});
+	$(".story-more").click(function () {
+		let visible = 0;
+		$(".story-preview").each(function () {
+			if ($(this).hasClass("_hidden-story")) {
+				visible++;
+				if (visible <= pagination) {
+					$(this).removeClass("_hidden-story");
+				}
+			}
+		});
+		if ($("._hidden-story").length == 0) {
+			$(this).fadeOut();
+		}
+	});
+});
+
+$(function () {
 	if ($(".blog-page").length) {
 		const BlogTypeSlider = new Swiper(".blog-type-slider", {
 			allowTouchMove: "false",
@@ -223,68 +310,6 @@ $(function () {
 });
 
 $(function () {
-	if ($(".other-news-slider").length) {
-		const OtherNewsSlider = new Swiper(".other-news-slider", {
-			slidesPerView: 1,
-			spaceBetween: 10,
-			breakpoints: {
-				700: {
-					slidesPerView: 2,
-				},
-				1100: {
-					slidesPerView: 3,
-					spaceBetween: 30,
-				},
-			},
-		});
-	}
-});
-
-$(function () {
-    if ($('.contact-page').length) {
-        let ind
-        $('.contact-data-swiper .swiper-slide').each(function (i) {
-            $(this).attr('data-indx',i)
-        });
-        const sliderContact = new Swiper('.contact-data-swiper ', {
-            allowTouchMove: 'false',
-            loop:false,
-        });
-        $('#contact-country').change(function () {
-            sliderContact.slideTo($('.swiper-slide[data-slide="' + $(this).val()+'"]').data('indx'))
-        })
-    }
-
-    
-    if ($('#contact-form').length) {
-        let validContacnt = $('#contact-form').validate(
-        {
-            errorPlacement: function (error, element) {
-            },
-                submitHandler: function (form) {
-                $('..contact-form__btn').attr('disabled','disabled')
-                $.ajax({
-                    url: $(form).attr('action'),
-                    data: $(form).serialize(),
-                    method: 'POST',
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    context: document.body,
-                    success: function () {
-                        alert('Форма отправленна успешно')
-                        $('..contact-form__btn').removeAttr('disabled')
-                    }, error: function () {
-                        alert('Ошибка')
-                        $('..contact-form__btn').removeAttr('disabled')
-                    }
-                });
-            }
-        })
-    }
-
-})
-$(function () {
     var elements = $('.sticky');
     Stickyfill.add(elements);
    Stickyfill.forceSticky()
@@ -296,14 +321,6 @@ $(function () {
     })
 })
 
-$(function () {
-    $('.select2').each(function () {
-        $(this).select2({
-            minimumResultsForSearch: -1,
-            placeholder: $(this).data('placeholder'),
-        })
-    })
-})
 $(function() {
     $('.header__mini').find('.header__menu-row ').html($('.header__full').find('.header__menu-row ').html());
   $(window).scroll(function () {
@@ -334,3 +351,12 @@ window.addEventListener('resize', () => {
         width = window.innerWidth;
     }
 });
+
+$(function () {
+    $('.select2').each(function () {
+        $(this).select2({
+            minimumResultsForSearch: -1,
+            placeholder: $(this).data('placeholder'),
+        })
+    })
+})
