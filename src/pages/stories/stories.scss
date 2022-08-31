@@ -11,19 +11,6 @@
 	.title {
 		text-align: left;
 	}
-	&__head {
-		display: flex;
-		padding-bottom: 46px;
-		border-bottom: 1px solid #dadada;
-		align-items: center;
-
-		&-filters {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 13px;
-		}
-	}
 }
 
 .title {
