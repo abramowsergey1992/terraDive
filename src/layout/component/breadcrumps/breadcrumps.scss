@@ -9,6 +9,9 @@
 	}
 
 	&__item {
+		._top-bg .top & {
+			color: rgb(255, 255, 255);
+		}
 		color: #5a6171;
 		&::after {
 			display: inline-block;
@@ -22,7 +25,12 @@
 	}
 
 	&__link {
-		color: #999999;
+		._top-bg .top & {
+			color: rgba(153, 153, 153, 1);
+			&:hover {
+				color: #fff;
+			}
+		}
 		text-decoration: none;
 		&:hover {
 			color: $blue;

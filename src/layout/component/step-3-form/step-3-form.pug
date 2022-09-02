@@ -1,0 +1,64 @@
+.step-3-form 
+    .step-3-form__bg
+    .step-3-form__title
+    .text.center 
+        h2 Leave a request to place an order
+        p Specify the features so that we can help you pick up the product
+    .step-3-form__steps 
+        button.step-3-form__step._active step 1
+        ._divider
+        button.step-3-form__step step 2
+        ._divider
+        button.step-3-form__step step 3
+    form.swiper#step-3-form-slider(method="POST",action="/",slide="0")
+        .swiper-wrapper
+            
+            .swiper-slide
+                .step-3-form__row
+                    .step-3-form__inp-gr
+                        input#step3-company._company-icon(data-rule-required, type="text",name="company",placeholder="Company name")
+                    .step-3-form__inp-gr
+                        input#step3-date._mask-date._date-icon(data-rule-required, type="text",name="date",placeholder="Date")
+                    .step-3-form__inp-gr
+                        input#step3-fullname._fullname-icon(data-rule-required, type="text",name="fullname",placeholder="Full name")
+                    .step-3-form__inp-gr
+                        input#step3-position._position-icon(data-rule-required, type="text",name="position",placeholder="Position")
+                    .step-3-form__inp-gr
+                        input#step3-phone._mask-phone._phone-icon(data-rule-required, type="text",name="phone",placeholder="Phone")
+                    .step-3-form__inp-gr
+                        input#step3-email._email-icon(data-rule-required,data-rule-email, type="text",name="email",placeholder="Email")
+                    .step-3-form__inp-gr._textarea
+                        textarea(data-rule-required, name="additionally",placeholder="Additionally")
+                .center 
+                    button(type='submit').btn-arrow#to-formslide-2  Next step
+            .swiper-slide
+                .step-3-form__ta-gr
+                    .step-3-form__ta-gr-title 1. Your tasks/goals 
+                    textarea(data-rule-required, name="task",placeholder="Describe what tasks you plan to solve using the radar survey method")
+                .step-3-form__ta-gr
+                    .step-3-form__ta-gr-title 2. Give a description of the object of study
+                    textarea(data-rule-required, name="description",placeholder="Describe the subject (flat/hilly/mountainous terrain; forest/swampy, etc.)")
+                .step-3-form__ta-gr
+                    .step-3-form__ta-gr-title 3. Additional information about the object
+                    textarea(data-rule-required,name="additionalInformation",placeholder="Describe what data is available on the object (Geological surveys, the presence of wells, images, topography, geophysical data, etc.)")
+                .step-3-form__ta-row 
+                    .step-3-form__ta-gr
+                        .step-3-form__ta-gr-title 4. Type of radar research
+                        textarea(data-rule-required,name="typeRadar",placeholder="Describe the research area")
+                    .step-3-form__ta-gr
+                        .step-3-form__ta-gr-title 5. Estimated depth of research
+                        textarea(data-rule-required,name="estimatedDepth",placeholder="Describe to what depth you want to explore the object (maximum 200 m)")
+                .center 
+                    button(type='submit').btn-arrow#to-formslide-3 Next step
+            .swiper-slide
+                .upload-files
+                    .upload-files__input
+                        input(type="file").upload-files__input-file
+                        | Upload a photo
+                    .upload-files__msg
+                    .upload-files__files 
+                 
+                .center 
+                    p.step-3-form__alert By clicking on the "Submit" button, you accept the terms of personal data processing
+                    button.step-3-form__submit.btn(type='submit') Submit
+                    div(style="height:300px")

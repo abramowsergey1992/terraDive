@@ -3,14 +3,24 @@
 	top: 0;
 	width: 100%;
 	z-index: 100;
+	._top-bg & {
+		background: transparent;
+	}
 	background: #fff;
 	&__full {
+		._top-bg & {
+			background: transparent;
+		}
+		._top-bg ._not-top & {
+			background: #fff;
+		}
 		background: #fff;
 		position: absolute;
 		top: 0px;
 		width: 100%;
 		transition: top 0.3s;
 		.header._not-top & {
+			background: #fff;
 			@media (max-width: 992px) {
 				position: static;
 			}
@@ -79,7 +89,30 @@
 
 	&__logo {
 		margin-right: auto;
+		position: relative;
 		overflow: hidden;
+		&-black {
+			transition: opacity 0.3s;
+			._top-bg .header__full & {
+				opacity: 0;
+			}
+			._top-bg ._not-top .header__full & {
+				opacity: 1;
+			}
+		}
+		&-white {
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			._top-bg .header__full & {
+				opacity: 1;
+			}
+			._top-bg ._not-top .header__full & {
+				opacity: 0;
+			}
+			transition: opacity 0.3s;
+		}
 		@media (max-width: 992px) {
 			img {
 				max-width: 123px;
@@ -96,6 +129,9 @@
 		margin-right: 24px;
 		text-decoration: none;
 		transition: color 0.3s;
+		._top-bg .header__full & {
+			color: #fff !important;
+		}
 		&:hover {
 			color: rgba(54, 77, 231, 1);
 		}
@@ -103,6 +139,11 @@
 
 	&__lang {
 		margin-right: 16px;
+		._top-bg .header:not(._not-top) .header__full & {
+			background: transparent;
+			color: #fff;
+			border-color: #fff;
+		}
 	}
 
 	&__feedback {
@@ -203,6 +244,10 @@
 		text-decoration: none;
 		transition: color 0.3s;
 		position: relative;
+		._top-bg .header__full & {
+			color: #fff;
+			border-top: 1px solid rgba(196, 196, 196, 0.4);
+		}
 		@media (max-width: 992px) {
 			border: 0 solid;
 			font-weight: 500;

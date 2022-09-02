@@ -120,3 +120,31 @@
 		color: #fff;
 	}
 }
+
+.btn-arrow {
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: -0.03em;
+	text-transform: uppercase;
+	padding-right: 20px;
+	color: $blue;
+	border: 0;
+	background: transparent;
+	padding-right: 0;
+	cursor: pointer;
+	&::after {
+		transition: left 0.3s;
+		margin-left: 8px;
+		background-image: url("data:image/svg+xml,%3Csvg width='13' height='11' viewBox='0 0 13 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.90828 8.17748L6.20117 8.88459L7.61538 10.2988L8.32249 9.59169L6.90828 8.17748ZM11 5.49997L11.7071 6.20708L12.4142 5.49997L11.7071 4.79287L11 5.49997ZM8.32249 1.40825L7.61538 0.701143L6.20117 2.11536L6.90828 2.82246L8.32249 1.40825ZM8.32249 9.59169L11.7071 6.20708L10.2929 4.79287L6.90828 8.17748L8.32249 9.59169ZM11.7071 4.79287L8.32249 1.40825L6.90828 2.82246L10.2929 6.20708L11.7071 4.79287ZM11 4.49997H0V6.49997H11V4.49997Z' fill='%23364DE7'/%3E%3C/svg%3E%0A");
+		display: inline-block;
+		content: "";
+		left: 0;
+		width: 13px;
+		height: 11px;
+		position: relative;
+	}
+	&:hover::after {
+		left: 5px;
+	}
+}
