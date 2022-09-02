@@ -1,0 +1,50 @@
+extends ../../layout/layout
+block title
+	title terraDive
+block content
+	.top
+		.top__bg
+			+picture('project-bg','jpg')
+		.top__circles
+			img(src="img/cirles.svg", alt="")
+		.container 
+				+breadcrumb(['Home'], 'Our projects')
+		.container.top__content
+		
+				h1 Georadar "Neo-dowser" in Giza. Part 1
+				p The survey of the eastern slope of the Giza Plateau was carried out from November 8 till November 19 in 2006 using the Neo-dowser georadar. 
+		.top__down
+			<svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M2 2L16 16L30 2" stroke="white" stroke-width="2" stroke-linecap="square"/>
+			</svg>
+	.t-desc.block
+		.t-desc__content
+			.h2 The site of archaeological excavations is located on the eastern slope of the Giza plateau near the pyramid of Cheops. On the terraces of the slope there are numerous tombs of 5-6 dynasties (approximately 2450 - 2350 BC). Most of these tombs were discovered by the expedition of the famous German archaeologist Lepsius in the middle of the 19th century. 
+	.t-two-img
+		.t-two-img__row
+			.t-two-img__item 
+				.t-two-img__img
+					+picture('p-1','jpg')
+			.t-two-img__item 
+				.t-two-img__img
+					+picture('p-2','jpg')
+	.t-desc
+		.t-desc__content
+			h2 It uses the  EVOLUTIONAL APPROACH to data transmission and processing – it implements the ability to see and transmit the received data in real time, applies a flexible analysis system: it can adapt the work plan depending on the results obtained.
+		.t-desc__right.text
+			p The main tasks set before the Archaeological Mission were: 
+			ul
+				li the discovery of the tombs indicated on the approximate plans of Lepsius 150 years ago, 
+				li research and detailed description of the tombs, in accordance with modern requirements of archeology
+	.t-two-img
+		.t-two-img__row
+			.t-two-img__item 
+				.t-two-img__img
+					+picture('pr-3','jpg')
+			.t-two-img__item 
+				.t-two-img__img
+					+picture('pr-4','jpg')
+		.t-two-img__content.text 
+			h2 During the first days of work, was discovered a bright object on the slope south of Khafraankh's tomb. 
+			p The diffraction picture (radio image) showed that there might be an object (tomb) in this place at a depth of 5-6 meters, consisting of two "rooms" with dimensions of approximately 2.5 x 4 meters. After three days of excavation, “false” doors of the sought-for object appeared under the stone canopy (11/19/06).
+		.t-two-img__footer November 08 - 19, 2006, Giza, Cairo, Egypt
