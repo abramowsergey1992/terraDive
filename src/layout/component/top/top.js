@@ -1,5 +1,5 @@
 $(function () {
-	if ($(".top__bg")) {
+	if ($(".top__bg").length) {
 		$("body").addClass("_top-bg");
 	}
 	$(".top__down").click(function () {

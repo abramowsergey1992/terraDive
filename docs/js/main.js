@@ -1,52 +1,4 @@
 $(function () {
-	if ($(".contact-page").length) {
-		let ind;
-		$(".contact-data-swiper .swiper-slide").each(function (i) {
-			$(this).attr("data-indx", i);
-		});
-		const sliderContact = new Swiper(".contact-data-swiper ", {
-			allowTouchMove: "false",
-			loop: false,
-		});
-		$("#contact-country").change(function () {
-			sliderContact.slideTo(
-				$('.swiper-slide[data-slide="' + $(this).val() + '"]').data(
-					"indx"
-				)
-			);
-		});
-	}
-
-	if ($("#contact-form").length) {
-		let validContacnt = $("#contact-form").validate({
-			errorPlacement: function (error, element) {},
-			submitHandler: function (form) {
-				$(".contact-form__btn").attr("disabled", "disabled");
-				$.ajax({
-					url: $(form).attr("action"),
-					data: $(form).serialize(),
-					method: "POST",
-					headers: {
-						"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
-							"content"
-						),
-					},
-					context: document.body,
-					success: function () {
-						alert("Форма отправленна успешно");
-						$(".contact-form__btn").removeAttr("disabled");
-					},
-					error: function () {
-						alert("Ошибка");
-						$(".contact-form__btn").removeAttr("disabled");
-					},
-				});
-			},
-		});
-	}
-});
-
-$(function () {
 	if ($(".blog-page").length) {
 		const BlogTypeSlider = new Swiper(".blog-type-slider", {
 			allowTouchMove: "false",
@@ -92,6 +44,24 @@ $(function () {
 		});
 		$(".blog-page__filter._active").trigger("click");
 		$(".blog-page__head-filter._active").trigger("click");
+	}
+});
+
+$(function () {
+	if ($(".other-news-slider").length) {
+		const OtherNewsSlider = new Swiper(".other-news-slider", {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			breakpoints: {
+				700: {
+					slidesPerView: 2,
+				},
+				1100: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+			},
+		});
 	}
 });
 
@@ -271,24 +241,6 @@ $(function () {
     }
 })
 $(function () {
-	if ($(".other-news-slider").length) {
-		const OtherNewsSlider = new Swiper(".other-news-slider", {
-			slidesPerView: 1,
-			spaceBetween: 10,
-			breakpoints: {
-				700: {
-					slidesPerView: 2,
-				},
-				1100: {
-					slidesPerView: 3,
-					spaceBetween: 30,
-				},
-			},
-		});
-	}
-});
-
-$(function () {
 	let grid = ["6/10", "4/10", "1/3", "1/3", "1/3"];
 	let pagelenght = $(".our-projects__projects").data("pagelenght");
 	let pagestart = $(".our-projects__projects").data("pagestart");
@@ -394,6 +346,55 @@ $(function () {
 	});
 });
 
+$(function(){})
+
+$(function () {
+	if ($(".contact-page").length) {
+		let ind;
+		$(".contact-data-swiper .swiper-slide").each(function (i) {
+			$(this).attr("data-indx", i);
+		});
+		const sliderContact = new Swiper(".contact-data-swiper ", {
+			allowTouchMove: "false",
+			loop: false,
+		});
+		$("#contact-country").change(function () {
+			sliderContact.slideTo(
+				$('.swiper-slide[data-slide="' + $(this).val() + '"]').data(
+					"indx"
+				)
+			);
+		});
+	}
+
+	if ($("#contact-form").length) {
+		let validContacnt = $("#contact-form").validate({
+			errorPlacement: function (error, element) {},
+			submitHandler: function (form) {
+				$(".contact-form__btn").attr("disabled", "disabled");
+				$.ajax({
+					url: $(form).attr("action"),
+					data: $(form).serialize(),
+					method: "POST",
+					headers: {
+						"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+							"content"
+						),
+					},
+					context: document.body,
+					success: function () {
+						alert("Форма отправленна успешно");
+						$(".contact-form__btn").removeAttr("disabled");
+					},
+					error: function () {
+						alert("Ошибка");
+						$(".contact-form__btn").removeAttr("disabled");
+					},
+				});
+			},
+		});
+	}
+});
 
 $(function () {
     var elements = $('.sticky');
@@ -432,6 +433,14 @@ $(function () {
 
 
 
+$(function () {
+    $('.select2').each(function () {
+        $(this).select2({
+            minimumResultsForSearch: -1,
+            placeholder: $(this).data('placeholder'),
+        })
+    })
+})
 $(function () {
 	if ($("#step-3-form-slider").length) {
 		const step3formSlider = new Swiper("#step-3-form-slider", {
@@ -557,7 +566,7 @@ $(function () {
 });
 
 $(function () {
-	if ($(".top__bg")) {
+	if ($(".top__bg").length) {
 		$("body").addClass("_top-bg");
 	}
 	$(".top__down").click(function () {
@@ -570,14 +579,6 @@ $(function () {
 	});
 });
 
-$(function () {
-    $('.select2').each(function () {
-        $(this).select2({
-            minimumResultsForSearch: -1,
-            placeholder: $(this).data('placeholder'),
-        })
-    })
-})
 var vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 var width = window.innerWidth;
