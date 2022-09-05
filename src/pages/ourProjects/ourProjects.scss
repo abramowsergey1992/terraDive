@@ -3,6 +3,22 @@
 	h2 {
 		text-align: center;
 	}
+	&__head {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		@media (max-width: 992px) {
+			text-align: left;
+			flex-direction: column;
+			margin-bottom: 30px;
+			align-items: flex-start;
+		}
+		h2,
+		.h2 {
+			text-align: left;
+			margin-right: auto;
+		}
+	}
 	&__filters {
 		display: flex;
 		flex-direction: row;
@@ -11,6 +27,9 @@
 		gap: 16px;
 		margin-bottom: 40px;
 		flex-wrap: wrap;
+		&._left {
+			justify-content: flex-start;
+		}
 		@media (max-width: 992px) {
 			gap: 10px;
 		}

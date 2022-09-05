@@ -47,54 +47,6 @@ $(function () {
 	}
 });
 
-$(function () {
-	if ($(".contact-page").length) {
-		let ind;
-		$(".contact-data-swiper .swiper-slide").each(function (i) {
-			$(this).attr("data-indx", i);
-		});
-		const sliderContact = new Swiper(".contact-data-swiper ", {
-			allowTouchMove: "false",
-			loop: false,
-		});
-		$("#contact-country").change(function () {
-			sliderContact.slideTo(
-				$('.swiper-slide[data-slide="' + $(this).val() + '"]').data(
-					"indx"
-				)
-			);
-		});
-	}
-
-	if ($("#contact-form").length) {
-		let validContacnt = $("#contact-form").validate({
-			errorPlacement: function (error, element) {},
-			submitHandler: function (form) {
-				$(".contact-form__btn").attr("disabled", "disabled");
-				$.ajax({
-					url: $(form).attr("action"),
-					data: $(form).serialize(),
-					method: "POST",
-					headers: {
-						"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
-							"content"
-						),
-					},
-					context: document.body,
-					success: function () {
-						alert("Форма отправленна успешно");
-						$(".contact-form__btn").removeAttr("disabled");
-					},
-					error: function () {
-						alert("Ошибка");
-						$(".contact-form__btn").removeAttr("disabled");
-					},
-				});
-			},
-		});
-	}
-});
-
 
 $(function () {
     let controller = new ScrollMagic.Controller();
@@ -271,6 +223,54 @@ $(function () {
     }
 })
 $(function () {
+	if ($(".contact-page").length) {
+		let ind;
+		$(".contact-data-swiper .swiper-slide").each(function (i) {
+			$(this).attr("data-indx", i);
+		});
+		const sliderContact = new Swiper(".contact-data-swiper ", {
+			allowTouchMove: "false",
+			loop: false,
+		});
+		$("#contact-country").change(function () {
+			sliderContact.slideTo(
+				$('.swiper-slide[data-slide="' + $(this).val() + '"]').data(
+					"indx"
+				)
+			);
+		});
+	}
+
+	if ($("#contact-form").length) {
+		let validContacnt = $("#contact-form").validate({
+			errorPlacement: function (error, element) {},
+			submitHandler: function (form) {
+				$(".contact-form__btn").attr("disabled", "disabled");
+				$.ajax({
+					url: $(form).attr("action"),
+					data: $(form).serialize(),
+					method: "POST",
+					headers: {
+						"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+							"content"
+						),
+					},
+					context: document.body,
+					success: function () {
+						alert("Форма отправленна успешно");
+						$(".contact-form__btn").removeAttr("disabled");
+					},
+					error: function () {
+						alert("Ошибка");
+						$(".contact-form__btn").removeAttr("disabled");
+					},
+				});
+			},
+		});
+	}
+});
+
+$(function () {
 	if ($(".other-news-slider").length) {
 		const OtherNewsSlider = new Swiper(".other-news-slider", {
 			slidesPerView: 1,
@@ -371,6 +371,29 @@ $(function () {
 $(function(){})
 $(function(){})
 $(function () {
+	if ($(".radars-catalog-slider").length) {
+		const radadrCatalogSwiper = new Swiper(".radars-catalog-slider", {
+			slidesPerView: 1.0,
+			spaceBetween: 16,
+			breakpoints: {
+				400: {
+					slidesPerView: 1.5,
+				},
+				580: {
+					slidesPerView: 2,
+				},
+				800: {
+					slidesPerView: 3,
+				},
+				992: {
+					slidesPerView: 4,
+				},
+			},
+		});
+	}
+});
+
+$(function () {
 	$(".directions__filter").click(function () {
 		$(".directions__filter").removeClass("_active");
 		$(this).addClass("_active");
@@ -416,12 +439,6 @@ $(function () {
 });
 
 
-$(function () {
-    var elements = $('.sticky');
-    Stickyfill.add(elements);
-   Stickyfill.forceSticky()
-})
-
 $(function() {
     $('.header__mini').find('.header__menu-row ').html($('.header__full').find('.header__menu-row ').html());
   $(window).scroll(function () {
@@ -450,6 +467,7 @@ $(function () {
 		Inputmask("99.99.9999").mask(this);
 	});
 });
+
 
 
 
@@ -599,6 +617,11 @@ $(function () {
 	});
 });
 
+$(function () {
+    var elements = $('.sticky');
+    Stickyfill.add(elements);
+   Stickyfill.forceSticky()
+})
 var vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 var width = window.innerWidth;

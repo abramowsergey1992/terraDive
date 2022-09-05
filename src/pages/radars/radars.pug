@@ -7,24 +7,61 @@ block content
 			+picture('project-bg','jpg')
 		.top__circles
 		.container 
-				+breadcrumb(['Home'], 'Our projects')
+				+breadcrumb(['Home'], 'Our Radars')
 		.container.top__content
 		
-				h1 Our projects
-				p  The ability to scan ground to depths of 200-300 meters, which does not violate the principle
-					br
-					| of profiling, the speed of measurements made in combination
+				h1 Radars
+				p The ability to scan ground to depths of 200-300 meters, which does not violate the principle of profiling, the speed of measurements made in combination
 		.top__down
 			<svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M2 2L16 16L30 2" stroke="white" stroke-width="2" stroke-linecap="square"/>
 			</svg>
-	.t-desc.block
-		.t-desc__content
-			h2 It uses the  EVOLUTIONAL APPROACH to data transmission and processing – it implements the ability to see and transmit the received data in real time, applies a flexible analysis system: it can adapt the work plan depending on the results obtained.
+	.radars-catalog.block
+		.radars-catalog-slider.swiper 
+			.swiper-wrapper 
+				.swiper-slide 
+					.radars-catalog-item 
+						.radars-catalog-item__front
+							+picture('radar-catalog-1','jpg').radars-catalog-item__img
+						.radars-catalog-item__back
+							.radars-catalog-item__category Georadar series
+							.radars-catalog-item__title Neo-dowser
+							.radars-catalog-item__body 
+								p “It has made unique archeological finds, discovered dozens of deposits, conducted numerous research for engineering geology.”
+							a(href="#").radars-catalog-item__more read more 
+				.swiper-slide 
+					.radars-catalog-item 
+						.radars-catalog-item__front
+							+picture('radar-catalog-2','jpg').radars-catalog-item__img
+						.radars-catalog-item__back
+							.radars-catalog-item__category Georadar series
+							.radars-catalog-item__title Neo-dowser
+							.radars-catalog-item__body 
+								p “It has made unique archeological finds, discovered dozens of deposits, conducted numerous research for engineering geology.”
+							a(href="#").radars-catalog-item__more read more 
+				.swiper-slide 
+					.radars-catalog-item 
+						.radars-catalog-item__front
+							+picture('radar-catalog-1','jpg').radars-catalog-item__img
+						.radars-catalog-item__back
+							.radars-catalog-item__category Georadar series
+							.radars-catalog-item__title Neo-dowser
+							.radars-catalog-item__body 
+								p “It has made unique archeological finds, discovered dozens of deposits, conducted numerous research for engineering geology.”
+							a(href="#").radars-catalog-item__more read more 
+				.swiper-slide
+					.radars-catalog-news
+						+picture('radar-catalog-news','jpg').radars-catalog-news__bg
+						.radars-catalog-news__content 
+							.radars-catalog-news__title Checking for possible sources of groundwater contamination
+							a(href="#").radars-catalog-news__more  read more
+
 
 	.our-projects.block
-		.h2 Our projects
-		.our-projects__filters
+		.our-projects__head 
+			h2 Our projects
+			.btnc(href="#")  all projects
+		.our-projects__filters._left  
 			button.btn-square._active.our-projects__filter(data-filter="all") All
 			button.btn-square.our-projects__filter(data-filter="Geoengineering") Geoengineering
 			button.btn-square.our-projects__filter(data-filter="Geological exploration") Geological exploration
