@@ -35,6 +35,9 @@ h2,
 	color {
 		color: $blue;
 	}
+	&._left {
+		text-align: left !important;
+	}
 	@media (max-width: 1300px) {
 		font-size: 40px;
 		margin-bottom: 40px;
@@ -64,10 +67,37 @@ h2,
 	max-width: 912px;
 	margin-left: auto;
 	margin-right: auto;
+	&._left {
+		margin-left: 0;
+	}
+	&._full {
+		max-width: 100%;
+	}
 	.page-head + & {
 		margin-top: 100px;
 		@media (max-width: 992px) {
 			margin-top: 60px;
+		}
+	}
+	h1,
+	.h1 {
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 66px;
+		letter-spacing: 6px;
+		text-transform: uppercase;
+		color: #2a2a29;
+		text-align: left;
+		margin-bottom: 30px;
+		@media (max-width: 992px) {
+			font-size: 35px;
+			margin-bottom: 20px;
+		}
+		&:not(:first-child) {
+			margin-top: 70px;
+			@media (max-width: 992px) {
+				margin-top: 40px;
+			}
 		}
 	}
 	h2,

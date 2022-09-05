@@ -24,6 +24,25 @@
 			display: block;
 			margin-right: auto;
 		}
+		.btn-square {
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 40px;
+
+			display: inline-block;
+			color: $blue;
+			border-color: $blue;
+			&:hover {
+				color: #fff;
+			}
+			._top-bg & {
+				border-color: #fff;
+				color: #fff;
+				&:hover {
+					border-color: $blue;
+				}
+			}
+		}
 	}
 	&__circles {
 		position: absolute;
