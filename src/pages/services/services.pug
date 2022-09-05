@@ -1,0 +1,62 @@
+extends ../../layout/layout
+block title
+	title terraDive
+block content
+	.top
+		.top__bg
+			+picture('project-bg','jpg')
+		.top__circles
+		.container 
+				+breadcrumb(['Home'], 'Uniqueness of the method')
+		.container.top__content
+		
+				h1 Services 
+				p  Algorithm for the provision of GPR survey services
+		.top__down
+			<svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M2 2L16 16L30 2" stroke="white" stroke-width="2" stroke-linecap="square"/>
+			</svg>
+	.t-desc.block
+		.t-desc__content
+			h2  It uses the  EVOLUTIONAL APPROACH to data transmission and processing – it implements the ability to see and transmit the received data in real time, applies a flexible analysis system: it can adapt the work plan depending on the results obtained.
+	.t-full-img
+		+picture('services','jpg')
+	.directions.block
+		h2 directions
+		.directions__filters 
+			button.btn-square._active.directions__filter(data-filter="all") All
+			button.btn-square.directions__filter(data-filter="Geoengineering") Geoengineering
+			button.btn-square.directions__filter(data-filter="Geological exploration") Geological exploration
+			button.btn-square.directions__filter(data-filter="Archaeology") Archaeology
+			button.btn-square.directions__filter(data-filter="Hydrogeology") Hydrogeology
+			button.btn-square.directions__filter(data-filter="Ecology") Ecology
+
+		.directions__row
+			.direction-preview(data-filter="Geoengineering")
+				.direction-preview__content  
+					.direction-preview__title Search for groundwater
+					a(href="#").direction-preview__more READ MORE
+			.direction-preview(data-filter="Geological exploration")
+				.direction-preview__content  
+					.direction-preview__title Survey of construction sites at the stage of construction preparation
+					a(href="#").direction-preview__more READ MORE
+			.direction-preview(data-filter="Archaeology")
+				.direction-preview__content  
+					.direction-preview__title Checking for possible sources of groundwater contamination
+					a(href="#").direction-preview__more READ MORE
+			.direction-preview(data-filter="Hydrogeology")
+				.direction-preview__content  
+					.direction-preview__title Delineation of mineral deposits
+					a(href="#").direction-preview__more READ MORE
+			.direction-preview(data-filter="Ecology")
+				.direction-preview__content  
+					.direction-preview__title Search for archaeological sites
+					a(href="#").direction-preview__more READ MORE
+			.direction-preview(data-filter="Geoengineering")
+				.direction-preview__content  
+					.direction-preview__title Control of hydraulic structures
+					a(href="#").direction-preview__more READ MORE
+		
+
+
+	include ../../layout/component/step-3-form/step-3-form
