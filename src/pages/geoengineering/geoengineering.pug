@@ -1,0 +1,101 @@
+extends ../../layout/layout
+block title
+	title terraDive
+block content
+	.top
+		.top__bg
+			+picture('geo','jpg')
+		.top__circles
+		.container 
+				+breadcrumb(['Home','Аreas of application'], 'Geoengineering')
+		.container.top__content
+		
+				h1 GEOENGINEERING 
+				p  The ability to scan ground to depths of 200-300 meters, which does not violate the principle of profiling, the speed of measurements made in combination
+		.top__down
+			<svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M2 2L16 16L30 2" stroke="white" stroke-width="2" stroke-linecap="square"/>
+			</svg>
+	.t-desc-full.block
+		.t-desc-full__content
+			h2 The ability to 
+				color scan ground to depths of 200-300 meters 
+				| which does not violate the principle of profiling, the speed of measurements made in combination with the speed and accuracy of data interpretation puts the NEODOWSER method out of competition compared to other radar methods of exploration.
+	.t-full-img
+		+picture('geo-2','jpg')
+	.t-two-gray-column.block
+		.t-two-gray-column__it
+			p 
+				color NEODOWSER method eliminates influence on the object under analysis. 
+				| It is an important advantage in comparison to liberally used drilling either during the exploration of karst and landslides or during the detection of underground defects of buildings and constructions. In the first case the drilling method may lead to speeding up the process, in the second case – to the destruction of constructions.
+		.t-two-gray-column__it 
+			p 
+				color The NEODOWSER is implemented in unacceptable conditions for other methods 
+				| of geophysics as steep landslide slopes, overgrown unprepared terrain, swampy marshy places, karsts at the bottom of reservoirs, etc.; this all makes it unique among other tools.
+	.block 
+		h2 
+			color NEODOWSER 
+			| is effectively
+			color used to solve such geoengineering tasks as:
+		.t-ol-column._two
+			ol 
+				li geoengineering and hydrogeological charting of construction sites, technogenic grounds (embankments of roads and railways, airfield runways, dams);
+				li georadar exploration of aquatories, identification of thickness of ice sheet;
+				li identification and geoengineering characterization of occurrence of dangerous geological processes such as sinkholes, landslides, subsidence, seasonal and perpetually frozen soils, leaks on water and oil pipelines;
+				li identification and charting of areas of contamination and emergency underground spills of petroleum products and other dangerous liquids, buried waste and landfills,
+				li identification and clarifying of the location of the underground objects, buried in the ground foundations during the design and building new constructions;
+				li searching for hidden structural defects of ground structures and grooves;
+				li detection of anomalous, technogenic and natural geological formations along the routes of underground pipeline laying using the methods of NSB and HDD, which can make the drifting difficult or impossible;
+				li clarifying of the position of existing and neglected underground utility lines.
+	.our-projects.block
+		.h2._left Our projects
+		.our-projects__projects
+			.project-preview._visible(data-width="6/10")
+				.project-preview__bg 
+					+picture('p-1','jpg')
+				.project-preview__content  
+					.project-preview__category Geoengineering
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in Giza. Part 1.
+				a(href="#").project-preview__more
+			.project-preview._visible(data-width="4/10")
+				.project-preview__bg 
+					+picture('p-2','jpg')
+				.project-preview__content  
+					.project-preview__category Geological exploration
+					.project-preview__title The Greek well.
+				a(href="#").project-preview__more
+			.project-preview._visible(data-width="1/3") 
+				.project-preview__bg 
+					+picture('p-3','jpg')
+				.project-preview__content  
+					.project-preview__category Archaeology
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in Giza. Part 2.
+				a(href="#").project-preview__more
+			.project-preview._visible(data-width="1/3") 
+				.project-preview__bg 
+					+picture('p-4','jpg')
+				.project-preview__content  
+					.project-preview__category Ecology
+					.project-preview__title Georadar survey
+						br
+						| of archaeological sites of Sudan
+				a(href="#").project-preview__more 
+			.project-preview._visible(data-width="1/3") 
+				.project-preview__bg 
+					+picture('p-5','jpg')
+				.project-preview__content  
+					.project-preview__category Hydrogeology
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in China.
+				a(href="#").project-preview__more
+	
+
+	include ../../layout/component/request-block/request-block
+	.next-area
+		.next-area__content
+			.next-area__bg
+				+picture('next-area','jpg')
+			.next-area__right
+				a(href="#").next-area__link
+				.next-area__text
+					.next-area__head  Next area
+					.next-area__title EXPLORATION
