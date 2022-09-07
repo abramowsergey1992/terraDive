@@ -138,6 +138,86 @@
 		}
 	}
 }
+.t-about {
+	padding-left: 84px;
+	padding-top: 30px;
+	position: relative;
+	display: grid;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	@media (max-width: 992px) {
+		padding-left: 30px;
+		padding-top: 30px;
+		grid-template-columns: 1fr;
+	}
+	&::before {
+		background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 29.8362C0 46.3204 13.4181 59.6724 29.9389 59.6724V45.5976C21.195 45.5976 14.1031 38.5301 14.1031 29.8162H0V29.8362Z' fill='%23364DE7'/%3E%3Cpath d='M45.7772 29.8362H59.9005C59.9005 13.3721 46.4824 0 29.9414 0V14.0748C38.6853 14.0748 45.7772 21.1423 45.7772 29.8563V29.8362Z' fill='%23364DE7'/%3E%3C/svg%3E%0A");
+		display: block;
+		position: absolute;
+		left: 38px;
+		top: 0;
+		content: "";
+		width: 60px;
+		height: 60px;
+		@media (max-width: 992px) {
+			width: 40px;
+			height: 40px;
+			left: 0;
+			top: 0;
+			background-size: contain;
+		}
+	}
+	&::after {
+		background-image: url("data:image/svg+xml,%3Csvg width='755' height='752' viewBox='0 0 755 752' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 375.621C0 583.146 168.926 751.24 376.913 751.24V574.047C266.832 574.047 177.55 485.071 177.55 375.368H0V375.621Z' fill='%235A6171' fill-opacity='0.05'/%3E%3Cpath d='M576.306 375.619H754.11C754.11 168.346 585.184 0 376.943 0V177.193C487.024 177.193 576.306 266.169 576.306 375.872V375.619Z' fill='%235A6171' fill-opacity='0.05'/%3E%3C/svg%3E%0A");
+		display: block;
+		content: "";
+		position: absolute;
+		left: 0;
+		top: -36px;
+		width: 751px;
+		height: 751px;
+		max-width: 70%;
+	}
+	h2,
+	.h2 {
+		font-weight: 400;
+		font-size: 34px;
+		@include lh(34, 50);
+		letter-spacing: initial;
+		text-transform: none;
+		@media (max-width: 992px) {
+			font-size: 25px;
+		}
+	}
+}
+.t-about-2 {
+	position: relative;
+	display: grid;
+	grid-template-columns: auto 30%;
+	grid-gap: 60px;
+	@media (max-width: 992px) {
+		padding-left: 30px;
+		padding-top: 30px;
+		grid-template-columns: 1fr;
+	}
+	&__right {
+		img {
+			max-width: 400px;
+		}
+	}
+	h2,
+	.h2 {
+		font-weight: 400;
+		font-size: 34px;
+		@include lh(34, 50);
+		letter-spacing: initial;
+		text-transform: none;
+		@media (max-width: 992px) {
+			font-size: 25px;
+		}
+	}
+}
 
 .t-desc {
 	padding-left: 84px;

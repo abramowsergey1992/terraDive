@@ -1,0 +1,127 @@
+.counters {
+	margin-top: 66px;
+	&__row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 77px;
+	}
+}
+.counter {
+	&__head {
+		font-weight: 700;
+		font-size: 96px;
+		line-height: 125%;
+		/* identical to box height, or  */
+
+		letter-spacing: -0.03em;
+		color: #364de7;
+	}
+	&__desc {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 133%;
+		/* or */
+
+		letter-spacing: -0.03em;
+
+		color: #5a6171;
+	}
+}
+.team {
+	.h2,
+	h2 {
+		text-align: center;
+	}
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 15px;
+		@media (max-width: 1100px) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		@media (max-width: 830px) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: 500px) {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+.team-it {
+	perspective: 1000;
+	position: relative;
+	cursor: pointer;
+	transition: 0.6s;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+
+	&:hover {
+		.team-it__front {
+			transform: rotateY(-180deg);
+		}
+		.team-it__back {
+			transform: rotateY(0deg);
+		}
+	}
+	&::before {
+		display: block;
+		content: "";
+		padding-bottom: 100%;
+	}
+	&__front,
+	&__back {
+		position: absolute;
+		left: 0;
+		perspective: 1000;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		transition: 0.6s;
+		transform-style: preserve-3d;
+		transition: transform 0.6s;
+		backface-visibility: hidden;
+	}
+	&__front {
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__back {
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 28px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		background: #fff;
+		transform: rotateY(180deg);
+		box-shadow: 0px 3.81395px 38.1395px rgba(0, 0, 0, 0.1);
+	}
+	&__position {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 21px;
+		color: #5a6171;
+	}
+	&__name {
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 159%;
+		color: #2a2a29;
+	}
+	&__body {
+		margin-top: auto;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 150%;
+		color: #5a6171;
+	}
+}

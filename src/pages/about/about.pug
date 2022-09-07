@@ -1,0 +1,155 @@
+extends ../../layout/layout
+block title
+	title terraDive
+block content
+	.top
+		.top__bg
+			+picture('about','jpg')
+		.top__circles
+		.container 
+				+breadcrumb(['Home','Аreas of application'], 'Geoengineering')
+		.container.top__content
+		
+				h1._big TERRADIVE 
+				p  The team of specialists who developed the method has hundreds of studies conducted in different parts of the world — in Botswana, Germany, Zambia, Zimbabwe, Iran, Kazakhstan, Kyrgyzstan, Namibia, Peru, Russia, Sudan, Tanzania, Turkey, Czech Republic, Chile, South Africa and other countries.
+		.top__down
+			<svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M2 2L16 16L30 2" stroke="white" stroke-width="2" stroke-linecap="square"/>
+			</svg>
+	.t-about.block
+		.t-about__left
+			h2 About 
+				br
+				|TerraDive
+		.t-about__right.text 
+			h2 A company engaged in GPR exploration (go exploring), where there is a whole geo consulting market, where companies are engaged in the production of a technological plan for the development of deposits.
+			hr
+			p They have made unique archaeological finds, discovered dozens of deposits, carried out numerous works in the field of engineering geology. Dozens of HDD routes have been laid, many accidents and catastrophes have been prevented by timely detection of the place and the cause of their possible occurrence.
+	.t-full-img
+		+picture('about-2','jpg')
+	.t-about-2.block
+		.t-about-2__left.text 
+			h2 
+				color The Team of specialists who has invented the method has under its belt hundreds of conducted explorations
+				| in different 
+				color parts of the world
+				| – in Botswana, Germany, Zambia, Zimbabwe, Iran, Kazakhstan, Kyrgyzstan, Namibia, Peru, Russia, Sudan, Tanzania, Turkey, Czech Republic, Chile, South Africa and other countries
+			.counters
+				.counters__row
+					.counter
+						.counter__head 10+
+						.counter__desc years on the
+							br
+							| market
+					.counter
+						.counter__head 1 343
+						.counter__desc completed projects
+					.counter
+						.counter__head 12
+						.counter__desc countries in
+							br
+							| which we work
+		.t-about-2__right.text 
+			p It has made unique archeological finds, discovered dozens of deposits, conducted numerous research for engineering geology. Dozens of HDD routes of line were made, many cases of accidents and catastrophes have been prevented by timely detection of the place and the cause of their possible occurrence.
+			+picture('about-3','jpg')
+	.stories.block
+		.page-head 
+			h1.title stories
+			a.btnc(href='stories.html') all stories
+		.stories-list(data-pagination="4") 
+		.story-preview
+			.story-preview__left 
+				.story-preview__episode Episode 1
+			.story-preview__right 
+				.story-preview__name Kopeikin V.V.
+				.story-preview__title How we discovered the spy.
+				a(href="story.html").story-preview__link 
+		.story-preview
+			.story-preview__left 
+				.story-preview__episode Episode 2
+			.story-preview__right 
+				.story-preview__name Kopeikin V.V.
+				.story-preview__title How we worked in the Kremlin.
+				a(href="story.html").story-preview__link 
+		.story-preview
+			.story-preview__left 
+				.story-preview__episode Episode 3
+			.story-preview__right 
+				.story-preview__name Morozov P.A.
+				.story-preview__title How we searched for the burial of schema-nun Pelageya Lanyaeva.
+				a(href="story.html").story-preview__link 
+		.story-preview
+			.story-preview__left 
+				.story-preview__episode Episode 4
+			.story-preview__right 
+				.story-preview__name Kopeikin V.V.
+				.story-preview__title  How we worked with the underwater marine GPR.
+				a(href="story.html").story-preview__link 
+	.team 
+		h2 team 
+		.team__row 
+			.team-it
+				.team-it__front
+					+picture('team-1','jpg')
+				.team-it__back
+					.team-it__position forwarder
+					.team-it__name Kopeikin V.V.
+					.team-it__body
+						p “It has made unique archeological finds, discovered dozens of deposits, conducted numerous research for engineering geology.”
+						
+			.team-it
+				.team-it__front
+					+picture('team-2','jpg')
+				.team-it__back
+					.team-it__position forwarder
+					.team-it__name Kopeikin V.V.
+					.team-it__body
+						p “It has made unique archeological finds, discovered dozens of deposits, conducted numerous research for engineering geology.”
+			.team-it
+				.team-it__front
+					+picture('team-4','jpg')
+				.team-it__back
+					.team-it__position forwarder
+					.team-it__name Kopeikin V.V.
+					.team-it__body
+						p “It has made unique archeological finds, discovered dozens of deposits, conducted numerous research for engineering geology.”
+			.team-it
+				.team-it__front
+					+picture('team-5','jpg')
+				.team-it__back
+					.team-it__position forwarder
+					.team-it__name Kopeikin V.V.
+					.team-it__body
+						p “It has made unique archeological finds, discovered dozens of deposits, conducted numerous research for engineering geology.”
+			.team-it
+				.team-it__front
+					+picture('team-6','jpg')
+				.team-it__back
+					.team-it__position forwarder
+					.team-it__name Kopeikin V.V.
+					.team-it__body
+						p “It has made unique archeological finds, discovered dozens of deposits, conducted numerous research for engineering geology.”
+			.team-it
+				.team-it__front
+					+picture('team-7','jpg')
+				.team-it__back
+					.team-it__position forwarder
+					.team-it__name Kopeikin V.V.
+					.team-it__body
+						p “It has made unique archeological finds, discovered dozens of deposits, conducted numerous research for engineering geology.”
+			.team-it
+				.team-it__front
+					+picture('team-8','jpg')
+				.team-it__back
+					.team-it__position forwarder
+					.team-it__name Kopeikin V.V.
+					.team-it__body
+						p “It has made unique archeological finds, discovered dozens of deposits, conducted numerous research for engineering geology.”
+			.team-it
+				.team-it__front
+					+picture('team-1','jpg')
+				.team-it__back
+					.team-it__position forwarder
+					.team-it__name Kopeikin V.V.
+					.team-it__body
+						p “It has made unique archeological finds, discovered dozens of deposits, conducted numerous research for engineering geology.”

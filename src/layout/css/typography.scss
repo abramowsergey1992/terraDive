@@ -67,6 +67,12 @@ h2,
 	max-width: 912px;
 	margin-left: auto;
 	margin-right: auto;
+	hr {
+		border-color: #dadada;
+		border-top: 0 solid;
+		margin-bottom: 15px;
+		margin-top: 0;
+	}
 	&._left {
 		margin-left: 0;
 	}

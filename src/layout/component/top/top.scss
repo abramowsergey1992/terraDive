@@ -18,6 +18,26 @@
 	&__content {
 		margin-top: auto;
 		margin-bottom: auto;
+		h1,
+		.h1 {
+			&._big {
+				font-weight: 700;
+				font-size: 128px;
+				line-height: 121.6%;
+				text-align: center;
+				letter-spacing: 6px;
+				margin-bottom: 0;
+				@media (max-width: 1024px) {
+					font-size: 100px;
+				}
+				@media (max-width: 800px) {
+					font-size: 80px;
+				}
+				@media (max-width: 600px) {
+					font-size: 40px;
+				}
+			}
+		}
 		p {
 			max-width: 700px;
 			margin-left: auto;
