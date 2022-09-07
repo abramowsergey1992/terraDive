@@ -1,0 +1,193 @@
+extends ../../layout/layout
+block title
+	title terraDive
+block content
+	.top
+		.top__bg
+			+picture('about','jpg')
+		.top__circles
+		.container 
+				+breadcrumb(['Home','Аreas of application'], 'Geoengineering')
+		.container.top__content
+		
+				h1 Uniqueness of the method
+				p  The ability to scan ground to depths of 200-300 meters, which does not violate the principle of profiling, the speed of measurements made in combination
+		.top__down
+			<svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M2 2L16 16L30 2" stroke="white" stroke-width="2" stroke-linecap="square"/>
+			</svg>
+	.t-desc.block
+		.t-desc__content
+			h2  It uses the  EVOLUTIONAL APPROACH to data transmission and processing – it implements the ability to see and transmit the received data in real time, applies a flexible analysis system: it can adapt the work plan depending on the results obtained.
+	.t-full-img
+		+picture('un','jpg')
+	.t-ol-column._three.block
+		ol 
+			li guarantees efficiency and high speed of decision-making: the compactness of the equipment makes it possible to move anywhere in the world in a short time;
+			li provides fast data collection and analysis: due to the minimum necessary preparation for the exploration and the speed of passing the site;
+			li guarantees the security and confidentiality of information: the analysis does not draw attention; the obtained data is protected.
+	.our-projects.block
+		.h2 Our projects
+		.our-projects__filters
+			button.btn-square._active.our-projects__filter(data-filter="all") All
+			button.btn-square.our-projects__filter(data-filter="Geoengineering") Geoengineering
+			button.btn-square.our-projects__filter(data-filter="Geological exploration") Geological exploration
+			button.btn-square.our-projects__filter(data-filter="Archaeology") Archaeology
+			button.btn-square.our-projects__filter(data-filter="Hydrogeology") Hydrogeology
+			button.btn-square.our-projects__filter(data-filter="Ecology") Ecology
+		.our-projects__projects(data-pagelenght="5",data-pagestart="5")
+			.project-preview(data-filter="Geoengineering")
+				.project-preview__bg 
+					+picture('p-1','jpg')
+				.project-preview__content  
+					.project-preview__category Geoengineering
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in Giza. Part 1.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Geological exploration")
+				.project-preview__bg 
+					+picture('p-2','jpg')
+				.project-preview__content  
+					.project-preview__category Geological exploration
+					.project-preview__title The Greek well.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Archaeology") 
+				.project-preview__bg 
+					+picture('p-3','jpg')
+				.project-preview__content  
+					.project-preview__category Archaeology
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in Giza. Part 2.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Ecology") 
+				.project-preview__bg 
+					+picture('p-4','jpg')
+				.project-preview__content  
+					.project-preview__category Ecology
+					.project-preview__title Georadar survey
+						br
+						| of archaeological sites of Sudan
+				a(href="#").project-preview__more 
+			.project-preview(data-filter="Hydrogeology") 
+				.project-preview__bg 
+					+picture('p-5','jpg')
+				.project-preview__content  
+					.project-preview__category Hydrogeology
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in China.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Archaeology") 
+				.project-preview__bg 
+					+picture('p-6','jpg')
+				.project-preview__content  
+					.project-preview__category Archaeology
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in China.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Geoengineering") 
+				.project-preview__bg 
+					+picture('p-7','jpg')
+				.project-preview__content  
+					.project-preview__category Geoengineering
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in China.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Geoengineering")
+				.project-preview__bg 
+					+picture('p-1','jpg')
+				.project-preview__content  
+					.project-preview__category Geoengineering
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in Giza. Part 1.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Geological exploration")
+				.project-preview__bg 
+					+picture('p-2','jpg')
+				.project-preview__content  
+					.project-preview__category Geological exploration
+					.project-preview__title The Greek well.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Archaeology") 
+				.project-preview__bg 
+					+picture('p-3','jpg')
+				.project-preview__content  
+					.project-preview__category Archaeology
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in Giza. Part 2.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Ecology") 
+				.project-preview__bg 
+					+picture('p-4','jpg')
+				.project-preview__content  
+					.project-preview__category Ecology
+					.project-preview__title Georadar survey
+						br
+						| of archaeological sites of Sudan
+				a(href="#").project-preview__more 
+			.project-preview(data-filter="Hydrogeology") 
+				.project-preview__bg 
+					+picture('p-5','jpg')
+				.project-preview__content  
+					.project-preview__category Hydrogeology
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in China.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Archaeology") 
+				.project-preview__bg 
+					+picture('p-6','jpg')
+				.project-preview__content  
+					.project-preview__category Archaeology
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in China.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Geoengineering") 
+				.project-preview__bg 
+					+picture('p-7','jpg')
+				.project-preview__content  
+					.project-preview__category Geoengineering
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in China.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Geoengineering")
+				.project-preview__bg 
+					+picture('p-1','jpg')
+				.project-preview__content  
+					.project-preview__category Geoengineering
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in Giza. Part 1.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Geological exploration")
+				.project-preview__bg 
+					+picture('p-2','jpg')
+				.project-preview__content  
+					.project-preview__category Geological exploration
+					.project-preview__title The Greek well.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Archaeology") 
+				.project-preview__bg 
+					+picture('p-3','jpg')
+				.project-preview__content  
+					.project-preview__category Archaeology
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in Giza. Part 2.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Ecology") 
+				.project-preview__bg 
+					+picture('p-4','jpg')
+				.project-preview__content  
+					.project-preview__category Ecology
+					.project-preview__title Georadar survey
+						br
+						| of archaeological sites of Sudan
+				a(href="#").project-preview__more 
+			.project-preview(data-filter="Hydrogeology") 
+				.project-preview__bg 
+					+picture('p-5','jpg')
+				.project-preview__content  
+					.project-preview__category Hydrogeology
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in China.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Archaeology") 
+				.project-preview__bg 
+					+picture('p-6','jpg')
+				.project-preview__content  
+					.project-preview__category Archaeology
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in China.
+				a(href="#").project-preview__more
+			.project-preview(data-filter="Geoengineering") 
+				.project-preview__bg 
+					+picture('p-7','jpg')
+				.project-preview__content  
+					.project-preview__category Geoengineering
+					.project-preview__title Ground-penetrating radar "Neo-dowser" in China.
+				a(href="#").project-preview__more
+		.our-projects__more show more
+	include ../../layout/component/step-3-form/step-3-form

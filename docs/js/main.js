@@ -481,21 +481,12 @@ $(function () {
 });
 
 
-
+$(function(){})
 $(function () {
     var elements = $('.sticky');
     Stickyfill.add(elements);
    Stickyfill.forceSticky()
 })
-$(function () {
-	$("._mask-phone").each(function () {
-		Inputmask("+7 (999) 999-99-99").mask(this);
-	});
-	$("._mask-date").each(function () {
-		Inputmask("99.99.9999").mask(this);
-	});
-});
-
 
 $(function() {
     $('.header__mini').find('.header__menu-row ').html($('.header__full').find('.header__menu-row ').html());
@@ -517,7 +508,25 @@ $(function() {
         }
     })
 });
+$(function () {
+	$("._mask-phone").each(function () {
+		Inputmask("+7 (999) 999-99-99").mask(this);
+	});
+	$("._mask-date").each(function () {
+		Inputmask("99.99.9999").mask(this);
+	});
+});
 
+
+
+$(function () {
+    $('.select2').each(function () {
+        $(this).select2({
+            minimumResultsForSearch: -1,
+            placeholder: $(this).data('placeholder'),
+        })
+    })
+})
 $(function () {
 	if ($("#step-3-form-slider").length) {
 		const step3formSlider = new Swiper("#step-3-form-slider", {
@@ -643,25 +652,6 @@ $(function () {
 });
 
 $(function () {
-    $('.select2').each(function () {
-        $(this).select2({
-            minimumResultsForSearch: -1,
-            placeholder: $(this).data('placeholder'),
-        })
-    })
-})
-var vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-var width = window.innerWidth;
-window.addEventListener('resize', () => {
-    if(width != window.innerWidth ){
-        var vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-        width = window.innerWidth;
-    }
-});
-
-$(function () {
 	if ($(".top__bg").length) {
 		$("body").addClass("_top-bg");
 	}
@@ -686,4 +676,15 @@ $(function () {
 			},
 		});
 	});
+});
+
+var vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+var width = window.innerWidth;
+window.addEventListener('resize', () => {
+    if(width != window.innerWidth ){
+        var vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        width = window.innerWidth;
+    }
 });

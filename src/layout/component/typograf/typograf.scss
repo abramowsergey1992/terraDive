@@ -356,6 +356,12 @@
 }
 
 .t-ol-column {
+	.t-full-img + & {
+		margin-top: -95px;
+		@media (max-width: 1024px) {
+			margin-top: -20px;
+		}
+	}
 	&._two {
 		ol {
 			columns: 2;
