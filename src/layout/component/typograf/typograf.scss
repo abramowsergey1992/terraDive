@@ -178,6 +178,8 @@
 		width: 751px;
 		height: 751px;
 		max-width: 70%;
+		background-size: contain;
+		background-repeat: no-repeat;
 	}
 	h2,
 	.h2 {
@@ -197,13 +199,14 @@
 	grid-template-columns: auto 30%;
 	grid-gap: 60px;
 	@media (max-width: 992px) {
-		padding-left: 30px;
-		padding-top: 30px;
 		grid-template-columns: 1fr;
 	}
 	&__right {
 		img {
 			max-width: 400px;
+			@media (max-width: 400px) {
+				max-width: 100%;
+			}
 		}
 	}
 	h2,
@@ -259,6 +262,8 @@
 		width: 751px;
 		height: 751px;
 		max-width: 70%;
+		background-size: contain;
+		background-repeat: no-repeat;
 	}
 	h2,
 	.h2 {

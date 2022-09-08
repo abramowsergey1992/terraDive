@@ -3,6 +3,9 @@
 	font-size: 14px;
 	line-height: 24px;
 	margin-bottom: 60px;
+	white-space: nowrap;
+	max-width: 100%;
+	overflow-x: auto;
 	&__list {
 		display: flex;
 		flex-direction: row;

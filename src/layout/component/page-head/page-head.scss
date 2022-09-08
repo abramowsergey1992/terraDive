@@ -3,10 +3,15 @@
 	padding-bottom: 46px;
 	border-bottom: 1px solid #dadada;
 	align-items: center;
+	flex-wrap: wrap;
 	.title {
 		margin-bottom: 0;
 		text-align: left;
 		margin-right: auto;
+		@media (max-width: 992px) {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
 	}
 	@media (max-width: 992px) {
 		padding-bottom: 25px;

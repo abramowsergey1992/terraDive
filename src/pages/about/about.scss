@@ -5,6 +5,9 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: 77px;
+		@media (max-width: 992px) {
+			gap: 30px;
+		}
 	}
 }
 .counter {
@@ -16,13 +19,18 @@
 
 		letter-spacing: -0.03em;
 		color: #364de7;
+		@media (max-width: 992px) {
+			font-size: 60px;
+		}
 	}
 	&__desc {
 		font-weight: 400;
 		font-size: 24px;
 		line-height: 133%;
 		/* or */
-
+		@media (max-width: 992px) {
+			font-size: 20px;
+		}
 		letter-spacing: -0.03em;
 
 		color: #5a6171;

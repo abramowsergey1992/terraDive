@@ -67,6 +67,9 @@ h2,
 	max-width: 912px;
 	margin-left: auto;
 	margin-right: auto;
+	@media (max-width: 992px) {
+		max-width: 100%;
+	}
 	hr {
 		border-color: #dadada;
 		border-top: 0 solid;
