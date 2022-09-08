@@ -1,7 +1,7 @@
 $(function () {
 	if ($(".blog-page").length) {
 		const BlogTypeSlider = new Swiper(".blog-type-slider", {
-			allowTouchMove: "false",
+			allowTouchMove: false,
 			loop: false,
 			autoHeight: true,
 		});
