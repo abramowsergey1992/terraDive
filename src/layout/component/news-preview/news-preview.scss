@@ -2,18 +2,41 @@
 	padding: 40px 30px;
 	padding-bottom: 30px;
 	background: #ffffff;
+	overflow: hidden;
 	border: 1px solid #d9d9d9;
 	@media (max-width: 992px) {
 		padding: 20px;
 	}
+	transition: filter 0.3s;
+	&:hover {
+		filter: drop-shadow(0px 11px 30px rgba(0, 0, 0, 0.1));
+	}
 	&__content {
 		padding-bottom: 140px;
 		position: relative;
-		background-image: url("data:image/svg+xml,%3Csvg width='74' height='74' viewBox='0 0 74 74' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 36.7286C0 57.0201 16.5173 73.4559 36.8538 73.4559V56.1303C26.0903 56.1303 17.3605 47.4304 17.3605 36.7039H0V36.7286Z' fill='%23F9F9F9'/%3E%3Cpath d='M56.347 36.7273H73.7323C73.7323 16.4606 57.215 0 36.8536 0V17.3256C47.6171 17.3256 56.347 26.0255 56.347 36.7521V36.7273Z' fill='%23F9F9F9'/%3E%3C/svg%3E%0A");
-		background-repeat: no-repeat;
+
 		background-position: bottom 60px right;
 		@media (max-width: 992px) {
 			padding-bottom: 120px;
+		}
+		&::after {
+			display: block;
+			content: "";
+			width: 74px;
+			height: 74px;
+			background-image: url("data:image/svg+xml,%3Csvg width='74' height='74' viewBox='0 0 74 74' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 36.7286C0 57.0201 16.5173 73.4559 36.8538 73.4559V56.1303C26.0903 56.1303 17.3605 47.4304 17.3605 36.7039H0V36.7286Z' fill='%23F9F9F9'/%3E%3Cpath d='M56.347 36.7273H73.7323C73.7323 16.4606 57.215 0 36.8536 0V17.3256C47.6171 17.3256 56.347 26.0255 56.347 36.7521V36.7273Z' fill='%23F9F9F9'/%3E%3C/svg%3E%0A");
+			background-repeat: no-repeat;
+			position: absolute;
+			bottom: 64px;
+			right: 0;
+			transition: transform 0.3s;
+		}
+		.news-preview:hover & {
+			&::after {
+				background-image: url("data:image/svg+xml,%3Csvg width='74' height='74' viewBox='0 0 74 74' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 36.7286C0 57.0201 16.5173 73.4559 36.8538 73.4559V56.1303C26.0903 56.1303 17.3605 47.4304 17.3605 36.7039H0V36.7286Z' fill='%23364de7'/%3E%3Cpath d='M56.347 36.7273H73.7323C73.7323 16.4606 57.215 0 36.8536 0V17.3256C47.6171 17.3256 56.347 26.0255 56.347 36.7521V36.7273Z' fill='%23364de7'/%3E%3C/svg%3E%0A");
+				background-repeat: no-repeat;
+				transform: rotate(180deg);
+			}
 		}
 	}
 
@@ -71,6 +94,17 @@
 		color: #364de7;
 		position: relative;
 		text-decoration: none;
+		&::before {
+			display: block;
+			position: absolute;
+			position: absolute;
+			left: -50%;
+			top: -50%;
+			width: 100vmax;
+			height: 100vmax;
+			content: "";
+			transform: translateX(-50%) translateY(-50%);
+		}
 		&::after {
 			display: block;
 			content: "";

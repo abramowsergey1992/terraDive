@@ -4,6 +4,12 @@ $(function () {
 			allowTouchMove: false,
 			loop: false,
 			autoHeight: true,
+			observeSlideChildren: true,
+			observer: true,
+			effect: "flip",
+			flipEffect: {
+				slideShadows: false,
+			},
 		});
 		$(".blog-page__head-filter").click(function () {
 			$(".blog-page__head-filter").removeClass("_active");
@@ -41,6 +47,7 @@ $(function () {
 					}
 				});
 			}
+			BlogTypeSlider.updateAutoHeight();
 		});
 		$(".blog-page__filter._active").trigger("click");
 		$(".blog-page__head-filter._active").trigger("click");

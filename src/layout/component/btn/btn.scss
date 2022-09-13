@@ -56,9 +56,13 @@
 			background-position: center;
 			background-repeat: no-repeat;
 		}
+		&::after {
+			background: #fff;
+		}
+		&:hover::after {
+			box-shadow: inset 0 0 0 18px #ccc;
+		}
 		&:hover::before {
-			box-shadow: inset 0 0 0 7px #ccc;
-			background-color: #fff;
 			background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.29289 9.29289L0.585786 10L2 11.4142L2.70711 10.7071L1.29289 9.29289ZM6 6L6.70711 6.70711L7.41421 6L6.70711 5.29289L6 6ZM2.70711 1.29289L2 0.585786L0.585786 2L1.29289 2.70711L2.70711 1.29289ZM2.70711 10.7071L6.70711 6.70711L5.29289 5.29289L1.29289 9.29289L2.70711 10.7071ZM6.70711 5.29289L2.70711 1.29289L1.29289 2.70711L5.29289 6.70711L6.70711 5.29289Z' fill='%23364DE7'/%3E%3C/svg%3E%0A");
 			background-position: center;
 			background-repeat: no-repeat;
@@ -77,13 +81,29 @@
 		position: absolute;
 		left: 0;
 		top: 50%;
+		z-index: 2;
+		transform: translateY(-50%);
+		box-shadow: inset 0 0 0 0px $blue;
+	}
+	&::after {
+		width: 37px;
+		height: 37px;
+		display: block;
+		content: "";
+		border-radius: 50%;
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 50%;
+		background: $blue;
 		transform: translateY(-50%);
 		box-shadow: inset 0 0 0 0px $blue;
 		transition: box-shadow 0.6s, background 0.2s;
 	}
+	&:hover::after {
+		box-shadow: inset 0 0 0 18px #212f8c;
+	}
 	&:hover::before {
-		box-shadow: inset 0 0 0 7px $blue;
-		background-color: #212f8c;
 		background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 10L6 6L2 2' stroke='white' stroke-width='2' stroke-linecap='square'/%3E%3C/svg%3E%0A");
 		background-position: center;
 		background-repeat: no-repeat;
