@@ -1,3 +1,24 @@
+@keyframes ani {
+	0% {
+		opacity: 0;
+		transform: translateY(80px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+._animate {
+}
+.blog-type-slider {
+	.swiper-slide.swiper-slide-next,
+	.swiper-slide.swiper-slide-prev {
+		opacity: 0;
+	}
+	.swiper-slide {
+		background-color: #fff;
+	}
+}
 .blog-page {
 	position: relative;
 	&__bg {
