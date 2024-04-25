@@ -1,15 +1,18 @@
 .counters {
 	margin-top: 66px;
+
 	&__row {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: 77px;
+
 		@media (max-width: 992px) {
 			gap: 30px;
 		}
 	}
 }
+
 .counter {
 	&__head {
 		font-weight: 700;
@@ -19,43 +22,54 @@
 
 		letter-spacing: -0.03em;
 		color: #364de7;
+
 		@media (max-width: 992px) {
 			font-size: 60px;
 		}
 	}
+
 	&__desc {
 		font-weight: 400;
 		font-size: 24px;
 		line-height: 133%;
+
 		/* or */
 		@media (max-width: 992px) {
 			font-size: 20px;
 		}
+
 		letter-spacing: -0.03em;
 
 		color: #5a6171;
 	}
 }
+
 .team {
+
 	.h2,
 	h2 {
 		text-align: center;
 	}
+
 	&__row {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-gap: 15px;
+
 		@media (max-width: 1100px) {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
+
 		@media (max-width: 830px) {
 			grid-template-columns: 1fr 1fr;
 		}
+
 		@media (max-width: 500px) {
 			grid-template-columns: 1fr;
 		}
 	}
 }
+
 .team-it {
 	perspective: 1000;
 	position: relative;
@@ -68,15 +82,18 @@
 		.team-it__front {
 			transform: rotateY(-180deg);
 		}
+
 		.team-it__back {
 			transform: rotateY(0deg);
 		}
 	}
+
 	&::before {
 		display: block;
 		content: "";
 		padding-bottom: 100%;
 	}
+
 	&__front,
 	&__back {
 		position: absolute;
@@ -90,6 +107,7 @@
 		transition: transform 0.6s;
 		backface-visibility: hidden;
 	}
+
 	&__front {
 		img {
 			position: absolute;
@@ -100,6 +118,7 @@
 			object-fit: cover;
 		}
 	}
+
 	&__back {
 		position: absolute;
 		left: 0;
@@ -113,18 +132,21 @@
 		transform: rotateY(180deg);
 		box-shadow: 0px 3.81395px 38.1395px rgba(0, 0, 0, 0.1);
 	}
+
 	&__position {
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 21px;
 		color: #5a6171;
 	}
+
 	&__name {
 		font-weight: 400;
 		font-size: 30px;
 		line-height: 159%;
 		color: #2a2a29;
 	}
+
 	&__body {
 		margin-top: auto;
 		font-weight: 400;
